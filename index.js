@@ -108,7 +108,7 @@ function createElement(container, element) {
                 const containerChoice = document.createElement("div");
                 const input = document.createElement("input");
                 const string = document.createElement("p");
-                containerChoice.setAttribute('className', 'container-choice');
+                containerChoice.setAttribute('class', 'container-choice');
                 input.setAttribute('type', 'checkbox');
                 input.setAttribute('class', 'checkbox');
                 input.setAttribute('id', `${number}`);
@@ -138,7 +138,7 @@ function createElement(container, element) {
                 const containerChoice = document.createElement("div");
                 const input = document.createElement("input");
                 const string = document.createElement("p");
-                containerChoice.setAttribute('className', 'container-choice');
+                containerChoice.setAttribute('class', 'container-choice');
                 input.setAttribute('type', 'checkbox');
                 input.setAttribute('class', 'checkbox');
                 string.setAttribute('class', 'string-choice');
@@ -189,16 +189,15 @@ function generer(){
     const getName = window.sessionStorage.getItem("name");
     const getLastName = window.sessionStorage.getItem("lastName")
     const element = document.getElementById('print');
-    element.style.width = "1200px";
+    element.style.width = "800px";
     const opt = {
         margin:       0,
         filename:     `${getName+'_'+getLastName+'_qcm.pdf'}`,
         image:        { type: 'jpeg', quality: 0.98 },
-    html2canvas:  {
-        scale: 2,           
-        windowWidth: 1024   
-    },
-    jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
+        html2canvas:  {
+            scale: 2  
+        },
+        jsPDF:        { unit: 'in', format: 'a4', orientation: 'portrait' }
        
     };
 

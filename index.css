@@ -90,7 +90,7 @@ h4{
 }
 .container-qcm{
     display: flex;
-    width: 100%;
+    width: 800px;
     flex-direction: column;
 }
 .group-header{
@@ -130,19 +130,50 @@ h4{
     flex-direction: column;
     width: 90%;
     max-width: 900px;
+    box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
+    padding: 15px;
+    border-radius: 15px;
+    height: auto;
+    margin: 30px 0;
 }
 .small-input_gestion{
     display: flex;
-    width: 90%;
-    max-width: 900px;
+    width: 100%;
     flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 20px;
 }
 .small-input{
-    width: 200px;
+    width: 150px;
     flex-wrap: wrap;
+    height: 30px;
+    box-shadow: rgb(50 50 93 / 25%) 0px 50px 100px -20px, rgb(0 0 0 / 30%) 0px 30px 60px -30px, rgb(10 37 64 / 35%) 0px -2px 6px 0px inset;
 }
 
+
+.big-input{
+    display: flex;
+    height: 200px;
+    box-shadow: inset rgb(50 50 93 / 25%) 0px 37px 27px -27px, inset rgb(0 0 0 / 27%) 0px 8px 41px -27px, rgb(10 37 64 / 35%) 0px -5px 16px 0px inset;
+}
 .btn-save{
     margin-bottom: 50px;
     height: 30px;
+}
+.choice_gestion{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.container-choice{
+    display: flex;
+    padding: 0px 15px;
+    border-radius: 15px;
+    background: burlywood;
+    width: fit-content;
+    margin-bottom: 15px;
+}
+.checkbox{
+    display: flex;
+    width: 20px;
 }
