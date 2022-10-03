@@ -135,6 +135,7 @@ h4{
     display: flex;
     width: 90%;
     max-width: 900px;
+    flex-wrap: wrap;
 }
 .small-input{
     width: 200px;

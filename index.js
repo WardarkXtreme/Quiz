@@ -193,7 +193,7 @@ function generer(){
         margin:       0,
         filename:     `${getName+'_'+getLastName+'_qcm.pdf'}`,
         image:        { type: 'jpeg', quality: 0.98 },
-        html2canvas:  { scale: 2, windowWidth: 1200},
+        html2canvas:  { scale: 2, windowWidth: 1800},
         jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
     };
 
