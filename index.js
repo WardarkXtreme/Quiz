@@ -189,16 +189,7 @@ function generer(){
     const getName = window.sessionStorage.getItem("name");
     const getLastName = window.sessionStorage.getItem("lastName")
     const element = document.getElementById('print');
-    const opt = {
-        margin:       0,
-        filename:     `${getName+'_'+getLastName+'_qcm.pdf'}`,
-        image:        { type: 'png', quality: 1 },
-        html2canvas:  { scale: 2 },
-        jsPDF:        { unit: 'in', format: 'a4', orientation: 'portrait' }
-    };
-
-    html2pdf().set(opt).from(element).save();
-
-    html2pdf(element, opt);
+    
+    html2pdf(element);
 
 }
