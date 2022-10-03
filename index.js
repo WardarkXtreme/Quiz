@@ -189,6 +189,7 @@ function generer(){
     const getName = window.sessionStorage.getItem("name");
     const getLastName = window.sessionStorage.getItem("lastName")
     const element = document.getElementById('print');
+    element.style.width = "1200px";
     const opt = {
         margin:       0,
         filename:     `${getName+'_'+getLastName+'_qcm.pdf'}`,
