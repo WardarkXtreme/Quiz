@@ -22,7 +22,7 @@
             </div>
         </div>
     </div>
-    <div class="container-qcm">
+    <div class="container-qcm" id="print">
         <section class="group-header">
             <h1 class="title">DU stérilisation - Toulouse</h1>
             <p class="text_presentation">
@@ -47,9 +47,11 @@
             </div>
         </section>
         <section class="qcm"></section>
-        <input type="button" value="Imprimer cette page" onClick="window.print()">
-
+        <input type="button" value="Imprimer cette page" onClick="generer()">
+        
     </div>
     <script src="./index.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js" integrity="sha512-YcsIPGdhPK4P/uRW6/sruonlYj+Q7UHWeKfTAkBW+g83NKM+jMJFJ4iAPfSnVp7BKD4dKMHmVSvICUbE/V1sSw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
 </html>

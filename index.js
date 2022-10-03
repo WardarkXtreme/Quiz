@@ -184,3 +184,20 @@ function createElement(container, element) {
         break;
     }
 }
+
+function generer(){
+    const element = document.getElementById('print');
+const opt = {
+  margin:       0,
+  filename:     'myfile.pdf',
+  image:        { type: 'jpeg', quality: 1 },
+  html2canvas:  { scale: 2 },
+  jsPDF:        { unit: 'in', format: 'a4', orientation: 'portrait' }
+};
+
+// New Promise-based usage:
+html2pdf().set(opt).from(element).save();
+
+// Old monolithic-style usage:
+html2pdf(element, opt);
+}
