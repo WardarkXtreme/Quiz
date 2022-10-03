@@ -1,0 +1,138 @@
+body{
+    margin: 0;
+    display: flex;
+    justify-content:center;
+    background-repeat: no-repeat;
+}
+h2{
+    color: cornflowerblue;
+}
+h3{
+    font-size: 1.4rem;
+    color: cornflowerblue;
+    margin-bottom: 0;
+}
+h4{
+    font-size: 1.2rem;
+    margin-top: 0;
+}
+.container-form{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index:100;
+    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(222,253,45,0.7133228291316527) 100%);
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    background: rgba(255, 255, 255, 0.24);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.6px);
+    -webkit-backdrop-filter: blur(5.6px);
+    border: 1px solid rgba(255, 255, 255, 0.74);
+}
+.group-input_form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.title_form_1, .title_form_2, .title_form_3{
+    margin: 10px 0;  
+}
+.title_form_1{
+    font-size: 3rem;
+    color: cornflowerblue;
+}
+.title_form_3{
+    margin-bottom: 40px;  
+}
+.input_form{
+    margin: 20px 0;
+    width: 80%;
+    max-width: 800px;
+    border: none;
+    background: transparent;
+    border-bottom: cornflowerblue solid 2px;
+    height: auto;
+    font-size: 1.4rem;
+}
+.input-btn{
+    display: flex;
+    width: 170px;
+    height: 40px;
+    border-radius: 2em;
+    background: burlywood;
+    border: none;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.61);
+    font-weight: 800;
+}
+.input-btn:hover{
+    transform: scale(1.1);
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+}
+.input-btn:active{
+    transform: scale(0.7);
+}
+.container-qcm{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+.group-header{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+.title{
+    font-size: 3rem;
+    color: cornflowerblue;
+}
+.text_presentation{
+    display: flex;
+    width: 90%;
+    max-width: 900px;
+    text-align: justify;
+    border: black solid 1px;
+    padding: 15px;
+}
+.group-id{
+    text-align: left;
+    width: 90%;
+    max-width: 900px;
+    font-size: 1.4rem;
+    padding: 15px;
+}
+
+.qcm{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+.group-question{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    max-width: 900px;
+}
+
+.small-input{
+    width: 200px;
+    flex-wrap: wrap;
+}

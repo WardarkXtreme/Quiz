@@ -1,0 +1,949 @@
+{
+    "QCM" : [
+        {
+            "role" : "input",
+            "QuestionNumber" : "Question 1/59",
+            "QuestionName" : "Citez les 4 paramètres (principes du nettoyage) qui composent le Cercle de Sinner :",
+            "smallInput" : [
+                {
+                    "0" : "0"
+                },
+                {
+                    "1" : "1"
+                },
+                {
+                    "2" : "2"
+                },
+                {
+                    "3" : "3"
+                }
+            ]
+        },
+        {
+            "role" : "input",
+            "QuestionNumber" : "Question 2/59",
+            "QuestionName" : "Pourquoi ne faut-il pas nettoyer aux ultrasons des instruments comportant une partie en caoutchouc ou en silicone ?",
+            "bigInput" : [
+                {
+                    "0" : "0"
+                }
+            ] 
+        },
+        {
+            "role" : "uniqueChoice",
+            "QuestionNumber" : "Question 3/59",
+            "QuestionName" : "Quel est le rôle principal du service de stérilisation ?",
+            "choice" : [
+                {
+                    "choice" : "Stériliser les instruments"
+                },
+                {
+                    "choice" : "Garantir l’état stérile des instruments dans le temps"
+                }
+            ] 
+        },
+        {
+            "role" : "uniqueChoice",
+            "QuestionNumber" : "Question 4/59",
+            "QuestionName" : "Lors d'un cycle en laveur-désinfecteur, quelle phase recommande l'utilisation d'eau osmosée ?",
+            "choice" : [
+                {
+                    "choice" : "Lavage"
+                },
+                {
+                    "choice" : "Neutralisation"
+                },
+                {
+                    "choice" : "Désinfection"
+                },
+                {
+                    "choice" : "Rinçage intermédiaire"
+                }
+            ] 
+        },
+        {
+            "role" : "uniqueChoice",
+            "QuestionNumber" : "Question 5/59",
+            "QuestionName" : "Dans le bac à ultrason, le principe de la cavitation a une action ?",
+            "choice" : [
+                {
+                    "choice" : "D’ébullition permettant une désinfection"
+                },
+                {
+                    "choice" : "Mécanique facilitant un nettoyage ultérieur (procédé d'appoint)"
+                }
+            ] 
+        },
+        {
+            "role" : "uniqueChoice",
+            "QuestionNumber" : "Question 6/59",
+            "QuestionName" : "L’eau utilisée dans le LDI a-t-elle besoin d’un traitement spécifique selon les recommandations des constructeurs ?",
+            "choice" : [
+                {
+                    "choice" : "Non"
+                },
+                {
+                    "choice" : "Oui utilisation unique d’eau osmosée"
+                },
+                {
+                    "choice" : "Oui utilisation unique d'eau adoucie"
+                },
+                {
+                    "choice" : "Oui utilisation d'eau adoucie et d'eau osmosée"
+                }
+            ] 
+        },
+        {
+            "role" : "multipleChoice",
+            "QuestionNumber" : "Question 7/59",
+            "QuestionName" : "Quelle est la particularité de la prise en charge des instruments neufs au lavage ?",
+            "choice" : [
+                {
+                    "choice" : "Prise en charge standard (1 cycle de LDI)"
+                },
+                {
+                    "choice" : "Effectuer une pré-désinfection avant de les mettre dans le LDI"
+                },
+                {
+                    "choice" : "Effectuer au moins 2 phases de lavage (ne pas confondre 1 cycle et 1 phase)"
+                }
+            ] 
+        },
+        {
+            "role" : "uniqueChoice",
+            "QuestionNumber" : "Question 8/59",
+            "QuestionName" : "Existe-t-il une alternative à l’étape de pré-désinfection ?",
+            "choice" : [
+                {
+                    "choice" : "Non"
+                },
+                {
+                    "choice" : "Oui"
+                }
+            ],
+            "titleInput" : "Justifiez votre réponse :",
+            "middleInput" : [
+                {
+                    "0" : "0"
+                }
+            ] 
+        },
+        {
+            "role" : "orderChoice",
+            "QuestionNumber" : "Question 9/59",
+            "QuestionName" : "Mettez dans l'ordre les étapes d’un cycle de LDI :",
+            "choiceOrder" : [
+                {
+                    "choice" : "Prélavage"
+                },
+                {
+                    "choice" : "Lavage/Nettoyage(s)"
+                },
+                {
+                    "choice" : "Désinfection thermique"
+                },
+                {
+                    "choice" : "Rinçage(s)"
+                },
+                {
+                    "choice" : "Séchage"
+                },
+                {
+                    "choice" : "Neutralisation acide (si nécessaire)"
+                }
+            ] 
+        },
+        {
+            "role" : "input",
+            "QuestionNumber" : "Question 10/59",
+            "QuestionName" : "Citez trois objectifs principaux de la pré-désinfection. « réponse libre »",
+            "middleInput" : [
+                {
+                    "0" : "premier objectif"
+                },
+                {
+                    "1" : "deuxieme objectif"
+                },
+                {
+                    "2" : "troisieme objectif"
+                }
+            ] 
+        },
+        {
+            "role" : "uniqueChoice",
+            "QuestionNumber" : "Question 11/59",
+            "QuestionName" : "Un écouvillonnage se fait par un mouvement de va et vient :",
+            "choice" : [
+                {
+                    "choice" : "Vrai"
+                },
+                {
+                    "choice" : "Faux"
+                },
+                {
+                    "choice": "Aucune importance"
+                }
+            ],
+            "titleInput" : "Justifiez votre réponse :",
+            "middleInput" : [
+                {
+                    "0" : "0"
+                }
+            ] 
+        },
+        {
+            "role" : "uniqueChoice",
+            "QuestionNumber" : "Question 12/59",
+            "QuestionName" : "Un écouvillonnage se fait par un mouvement de va et vient :",
+            "choice" : [
+                {
+                    "choice" : "Tirer"
+                },
+                {
+                    "choice" : "Pousser"
+                },
+                {
+                    "choice": "Aucune importance"
+                }
+            ]
+        },
+        {
+            "role" : "uniqueChoice",
+            "QuestionNumber" : "Question 13/59",
+            "QuestionName" : "Concernant les brosses de lavage, quelle est la méthode préconisée entre deux utilisations ?",
+            "choice" : [
+                {
+                    "choice" : "Immersion dans une solution DD"
+                },
+                {
+                    "choice" : "Pas d’immersion dans une solution DD"
+                }
+            ]
+        },
+        {
+            "role" : "multipleChoice",
+            "QuestionNumber" : "Question 14/59",
+            "QuestionName" : "Lesquels de ces EPI (équipements de protection individuelle) sont appropriés en zone de lavage ?",
+            "choice" : [
+                {
+                    "choice" : "Gants"
+                },
+                {
+                    "choice" : "Sabots spécifiques"
+                },
+                {
+                    "choice" : "Tablier usage unique"
+                },
+                {
+                    "choice" : "Charlotte"
+                },
+                {
+                    "choice" : "Lunettes de protection"
+                }
+            ] 
+        },
+        {
+            "role" : "uniqueChoice",
+            "QuestionNumber" : "Question 15/59",
+            "QuestionName" : "Les instruments non immergeables (certains moteurs par exemple) doivent être pré-désinfectés après utilisation.",
+            "choice" : [
+                {
+                    "choice" : "Vrai"
+                },
+                {
+                    "choice" : "Faux"
+                }
+            ],
+            "titleInput" : "Précisez la méthode  :",
+            "middleInput" : [
+                {
+                    "0" : "0"
+                }
+            ] 
+        },
+        {
+            "role" : "uniqueChoice",
+            "QuestionNumber" : "Question 16/59",
+            "QuestionName" : "On peut laisser sécher les instruments après la pré-désinfection :",
+            "choice" : [
+                {
+                    "choice" : "Vrai"
+                },
+                {
+                    "choice" : "Faux"
+                }
+            ],
+            "titleInput" : "Justifiez votre réponse :",
+            "middleInput" : [
+                {
+                    "0" : "0"
+                }
+            ] 
+        },
+        {
+            "role" : "uniqueChoice",
+            "QuestionNumber" : "Question 17/59",
+            "QuestionName" : "On peut laisser sécher les instruments après la pré-désinfection :",
+            "choice" : [
+                {
+                    "choice" : "Vrai"
+                },
+                {
+                    "choice" : "Faux"
+                },
+                {
+                    "choice" : "Dans certains cas"
+                }
+            ]
+        },
+        {
+            "role" : "uniqueChoice",
+            "QuestionNumber" : "Question 18/59",
+            "QuestionName" : "Est-il nécessaire de stériliser les brosses de lavage ?",
+            "choice" : [
+                {
+                    "choice" : "Oui, c’est une obligation"
+                },
+                {
+                    "choice" : "Oui, c’est une recommandation"
+                },
+                {
+                    "choice" : "Non"
+                }
+            ]
+        },
+        {
+            "role" : "multipleChoice",
+            "QuestionNumber" : "Question 19/59",
+            "QuestionName" : "Le lavage des DMR :",
+            "choice" : [
+                {
+                    "choice" : "Repose sur un procédé chimique"
+                },
+                {
+                    "choice" : "Repose sur une action mécanique"
+                },
+                {
+                    "choice" : "Les instruments creux doivent impérativement être irrigués"
+                },
+                {
+                    "choice" : "L’efficacité des produits chimiques dépend de la température (de l’eau)"
+                }
+            ] 
+        },
+        {
+            "role" : "multipleChoice",
+            "QuestionNumber" : "Question 20/59",
+            "QuestionName" : "De quelle manière peut-on vérifier la bonne qualité du scellage de la soudeuse (Lorsque cela est possible) ?",
+            "choice" : [
+                {
+                    "choice" : "aucun"
+                },
+                {
+                    "choice" : "test bleu de méthylène (ou équivalent)"
+                },
+                {
+                    "choice" : "Seal check"
+                }
+            ] 
+        },
+        {
+            "role" : "uniqueChoice",
+            "QuestionNumber" : "Question 21/59",
+            "QuestionName" : "Le test d’étanchéité des sachets/gaines se fait :",
+            "choice" : [
+                {
+                    "choice" : "Avant passage à l’autoclave"
+                },
+                {
+                    "choice" : "Après passage à l’autoclave"
+                }
+            ]
+        },
+        {
+            "role" : "uniqueChoice",
+            "QuestionNumber" : "Question 22/59",
+            "QuestionName" : "Pour libérer une charge, il faut :",
+            "choice" : [
+                {
+                    "choice" : "L’habilitation conducteur d’autoclave"
+                },
+                {
+                    "choice" : "L’habilitation du chef de service (pharmacien)"
+                }
+            ]
+        },
+        {
+            "role" : "uniqueChoice",
+            "QuestionNumber" : "Question 23/59",
+            "QuestionName" : "Pour un acier, un choc thermique s'observe lorsque l'écart entre deux surfaces est :",
+            "choice" : [
+                {
+                    "choice" : "> 20° C"
+                },
+                {
+                    "choice" : "> 40° C"
+                }
+            ]
+        },
+        {
+            "role" : "multipleChoice",
+            "QuestionNumber" : "Question 24/59",
+            "QuestionName" : "Quel(s) est(sont) le(s) risque(s) d’un choc thermique en sortie de stérilisateur ?",
+            "choice" : [
+                {
+                    "choice" : "instruments HS (optiques et moteurs)"
+                },
+                {
+                    "choice" : "Sur-condensation"
+                }
+            ]
+        },
+        {
+            "role" : "uniqueChoice",
+            "QuestionNumber" : "Question 25/59",
+            "QuestionName" : "On a besoin de la pression dans un stérilisateur pour :",
+            "choice" : [
+                {
+                    "choice" : "Permettre à la vapeur de pénétrer plus facilement dans les systèmes d’emballages"
+                },
+                {
+                    "choice" : "Produire la vapeur saturée à 134°C"
+                }
+            ]
+        },
+        {
+            "role" : "uniqueChoice",
+            "QuestionNumber" : "Question 26/59",
+            "QuestionName" : "Le Niveau Assurance Stérile (NAS) est la probabilité de :",
+            "choice" : [
+                {
+                    "choice" : "Une réduction de 1 000 microorganismes"
+                },
+                {
+                    "choice" : "Une réduction de 100 000 microorganismes"
+                },
+                {
+                    "choice" : "Une réduction de 1 000 000 microorganismes"
+                }
+            ]
+        },
+        {
+            "role" : "uniqueChoice",
+            "QuestionNumber" : "Question 27/59",
+            "QuestionName" : "Qui définit la durée de péremption ?",
+            "choice" : [
+                {
+                    "choice" : "Les fournisseurs de système emballage"
+                },
+                {
+                    "choice" : "Le pharmacien, chef de service de stérilisation"
+                },
+                {
+                    "choice" : "Un logiciel de stérilisation"
+                }
+            ]
+        },
+        {
+            "role" : "uniqueChoice",
+            "QuestionNumber" : "Question 28/59",
+            "QuestionName" : "Un emballage primaire dans le sens des BPPH, correspond dans norme NF EN ISO 11607-1 à :",
+            "choice" : [
+                {
+                    "choice" : "un emballage de protection"
+                },
+                {
+                    "choice" : "un système de barrière stérile"
+                }
+            ]
+        },
+        {
+            "role" : "multipleChoice",
+            "QuestionNumber" : "Question 29/59",
+            "QuestionName" : "Qu'indique la table de Regnault ?",
+            "choice" : [
+                {
+                    "choice" : "La qualité de la vapeur d’eau"
+                },
+                {
+                    "choice" : "La correspondance entre la durée et la température pour obtenir de la vapeur d'eau saturée"
+                },
+                {
+                    "choice" : "La correspondance entre température et pression pour obtenir de la vapeur d'eau saturée"
+                },
+                {
+                    "choice" : "La correspondance entre la durée et la pression pour obtenir de la vapeur d'eau saturée"
+                }
+            ] 
+        },
+        {
+            "role" : "uniqueChoice",
+            "QuestionNumber" : "Question 30/59",
+            "QuestionName" : "Qu'est-ce qu'un prion ?",
+            "choice" : [
+                {
+                    "choice" : "Une bactérie"
+                },
+                {
+                    "choice" : "Un virus"
+                },
+                {
+                    "choice" : "Une protéine"
+                },
+                {
+                    "choice" : "Un champignon"
+                }
+            ] 
+        },
+        {
+            "role" : "input",
+            "QuestionNumber" : "Question 31/59",
+            "QuestionName" : "Que signifie le terme Z.A.C ?",
+            "bigInput" : [
+                {
+                    "0" : "0"
+                }
+            ] 
+        },
+        {
+            "role" : "input",
+            "QuestionNumber" : "Question 32/59",
+            "QuestionName" : "Décrivez la notion de pelabilité sur une gaine ?",
+            "bigInput" : [
+                {
+                    "0" : "0"
+                }
+            ] 
+        },
+        {
+            "role" : "uniqueChoice",
+            "QuestionNumber" : "Question 33/59",
+            "QuestionName" : "Quel est le terme utilisé en milieu hospitalier pour désigner l'absence d’humidité ?",
+            "choice" : [
+                {
+                    "choice" : "Sec"
+                },
+                {
+                    "choice" : "Siccité"
+                },
+                {
+                    "choice" : "Condensation"
+                },
+                {
+                    "choice" : "Liquéfaction"
+                }
+            ] 
+        },
+        {
+            "role" : "multipleChoice",
+            "QuestionNumber" : "Question 34/59",
+            "QuestionName" : "Quels contrôles doit-on effectuer tous les matins dans le service de stérilisation ?",
+            "choice" : [
+                {
+                    "choice" : "Hygrométrie"
+                },
+                {
+                    "choice" : "Température"
+                },
+                {
+                    "choice" : "Pression"
+                }
+            ] 
+        },
+        {
+            "role" : "uniqueChoice",
+            "QuestionNumber" : "Question 35/59",
+            "QuestionName" : "Selon les BPPH quel test doit-on effectuer au moins toutes les 24H pour la stérilisation à la vapeur d'eau saturée ?",
+            "choice" : [
+                {
+                    "choice" : "Test d’étanchéité"
+                },
+                {
+                    "choice" : "Test de vide"
+                },
+                {
+                    "choice" : "Test de pénétration de vapeur"
+                }
+            ] 
+        },
+        {
+            "role" : "uniqueChoice",
+            "QuestionNumber" : "Question 36/59",
+            "QuestionName" : "Peut-on refuser une Unité Stérile tout en validant le reste de la charge ?",
+            "choice" : [
+                {
+                    "choice" : "Oui"
+                },
+                {
+                    "choice" : "Non"
+                }
+            ] 
+        },
+        {
+            "role" : "uniqueChoice",
+            "QuestionNumber" : "Question 37/59",
+            "QuestionName" : "Le test d’étanchéité s’applique aussi pour les pliages :",
+            "choice" : [
+                {
+                    "choice" : "Vrai"
+                },
+                {
+                    "choice" : "Faux"
+                }
+            ],
+            "titleInput" : "Justifiez votre réponse :",
+            "middleInput" : [
+                {
+                    "0" : "0"
+                }
+            ] 
+        },
+        {
+            "role" : "uniqueChoice",
+            "QuestionNumber" : "Question 38/59",
+            "QuestionName" : "Peut-on restériliser les sachets périmés sans changer l’emballage ?",
+            "choice" : [
+                {
+                    "choice" : "Oui"
+                },
+                {
+                    "choice" : "Non"
+                }
+            ],
+            "titleInput" : "Justifiez votre réponse :",
+            "middleInput" : [
+                {
+                    "0" : "0"
+                }
+            ] 
+        },
+        {
+            "role" : "uniqueChoice",
+            "QuestionNumber" : "Question 39/59",
+            "QuestionName" : "En sortie des stérilisateurs, côté déchargement, est-il obligatoire de disposer d'une ZAC en classe ISO 8 ?",
+            "choice" : [
+                {
+                    "choice" : "Oui"
+                },
+                {
+                    "choice" : "Non"
+                }
+            ] 
+        },
+        {
+            "role" : "uniqueChoice",
+            "QuestionNumber" : "Question 40/59",
+            "QuestionName" : "En sortie des stérilisateurs, côté déchargement, est-il obligatoire de disposer d'une ZAC en classe ISO 8 ?",
+            "choice" : [
+                {
+                    "choice" : "Sécher une Unité Stérile non conforme sur la Siccité"
+                },
+                {
+                    "choice" : "Sécher un instrument qui est encore humide sortant du LDI"
+                }
+            ] 
+        },
+        {
+            "role" : "orderChoice",
+            "QuestionNumber" : "Question 41/59",
+            "QuestionName" : "Classez dans l'ordre, les phases d'un cycle de stérilisateur :",
+            "choiceOrder" : [
+                {
+                    "choice" : "Plateau de stérilisation"
+                },
+                {
+                    "choice" : "Post-traitement (séchage)"
+                },
+                {
+                    "choice" : "Pré-traitement"
+                },
+                {
+                    "choice" : "égalisation (mise à la PA)"
+                }
+            ] 
+        },
+        {
+            "role" : "input",
+            "QuestionNumber" : "Question 42/59",
+            "QuestionName" : "Combien de zones doit-on avoir dans un service de stérilisation au minimum ?",
+            "bigInput" : [
+                {
+                    "0" : "0"
+                }
+            ] 
+        },
+        {
+            "role" : "input",
+            "QuestionNumber" : "Question 43/59",
+            "QuestionName" : "La vapeur d'eau saturée est une méthode pour lutter contre l'ATNC, mais que signifie ATNC ?",
+            "bigInput" : [
+                {
+                    "0" : "0"
+                }
+            ] 
+        },
+        {
+            "role" : "uniqueChoice",
+            "QuestionNumber" : "Question 44/59",
+            "QuestionName" : "Selon l'instruction DGS/R13 2011-449, pour lutter contre les ATNC type Prion, l'action de la vapeur d'eau Saturée est une inactivation :",
+            "choice" : [
+                {
+                    "choice" : "Partielle"
+                },
+                {
+                    "choice" : "Importante"
+                },
+                {
+                    "choice" : "Totale"
+                }
+            ] 
+        },
+        {
+            "role" : "input",
+            "QuestionNumber" : "Question 45/59",
+            "QuestionName" : "Selon l'instruction DGS/R13 2011-449, pour lutter contre les ATNC type Prion, l'action de la vapeur d'eau Saturée est une inactivation :",
+            "bigInput" : [
+                {
+                    "0" : "0"
+                }
+            ] 
+        },
+        {
+            "role" : "input",
+            "QuestionNumber" : "Question 46/59",
+            "QuestionName" : "Le système d'emballage (au sens de la norme NF EN ISO 11607-1) est-il obligatoire ?",
+            "bigInput" : [
+                {
+                    "0" : "0"
+                }
+            ] 
+        },
+        {
+            "role" : "uniqueChoice",
+            "QuestionNumber" : "Question 47/59",
+            "QuestionName" : "Selon la norme NF EN ISO 17665, un PCD ou DEP (en Français) est un :",
+            "choice" : [
+                {
+                    "choice" : "un test Bowie Dick ou test type Hélix ou un système électronique d'embarqué"
+                },
+                {
+                    "choice" : "un cycle de pénétration de vapeur"
+                }
+            ] 
+        },
+        {
+            "role" : "input",
+            "QuestionNumber" : "Question 48/59",
+            "QuestionName" : "Dans les BPPH, on parle de la 'libération de la charge', pouvez vous expliquer ce terme :",
+            "bigInput" : [
+                {
+                    "0" : "0"
+                }
+            ] 
+        },
+        {
+            "role" : "orderChoice",
+            "QuestionNumber" : "Question 49/59",
+            "QuestionName" : "Mettez dans l'ordre les grandes étapes de la stérilisation :",
+            "choiceOrder" : [
+                {
+                    "choice" : "Livraison des DMR au bloc"
+                },
+                {
+                    "choice" : "stérilisation par stérilisateur"
+                },
+                {
+                    "choice" : "Recomposition/conditionnement"
+                },
+                {
+                    "choice" : "Libération paramétrique"
+                },
+                {
+                    "choice" : "Pré-désinfection"
+                },
+                {
+                    "choice" : "nettoyage/désinfection (manuel ou LDI)"
+                }
+            ] 
+        },
+        {
+            "role" : "orderChoice",
+            "QuestionNumber" : "Question 50/59",
+            "QuestionName" : "Mettez dans l'ordre les actions qui rentre dans le process de validation avant de libérer la charge :",
+            "choiceOrder" : [
+                {
+                    "choice" : "vérifier l'intégrité de chaque unité stérile"
+                },
+                {
+                    "choice" : "Décharger la charge en évitant le choc thermique"
+                },
+                {
+                    "choice" : "Vérifier les témoins de passages sur les emballages ou système d'emballage"
+                },
+                {
+                    "choice" : "vérifier la siccité"
+                },
+                {
+                    "choice" : "Libération paramétrique (données graphique ou numérique)"
+                }
+            ],
+            "titleInput" : "Juste du bon sens...",
+            "middleInput" : [
+                {
+                    "0" : "0"
+                }
+            ] 
+        },
+        {
+            "role" : "multipleChoice",
+            "QuestionNumber" : "Question 51/59",
+            "QuestionName" : "Concernant la propreté de l'air requise dans la ZAC décrite dans les BPPH, quels sont les paramètres attendues :",
+            "choice" : [
+                {
+                    "choice" : "Caractéristiques de la classe 7 de la norme NF EN ISO 14644-1 au repos"
+                },
+                {
+                    "choice" : "Caractéristiques de la classe 8 de la norme NF EN ISO 14644-1 au repos"
+                },
+                {
+                    "choice" : "Limite recommandée de contamination microbiologique < à 200 UFC/m3"
+                },
+                {
+                    "choice" : "En dépression au moins de 15Pa par rapport aux zones environnantes d’exigences inférieures"
+                },
+                {
+                    "choice" : "En suppression au moins de 15Pa par rapport aux zones environnantes d’exigences inférieures"
+                }
+            ] 
+        },
+        {
+            "role" : "multipleChoice",
+            "QuestionNumber" : "Question 52/59",
+            "QuestionName" : "Sur un autoclave le cycle thermorésistant peut avoir plusieurs intitulés :",
+            "choice" : [
+                {
+                    "choice" : "Cycle ATNC"
+                },
+                {
+                    "choice" : "Cycle Conteneur / Instruments Lourds"
+                },
+                {
+                    "choice" : "Cycle Prion"
+                },
+                {
+                    "choice" : "Cycle Caoutchouc"
+                },
+                {
+                    "choice" : "Cycle de vide"
+                }
+            ] 
+        },
+        {
+            "role" : "multipleChoice",
+            "QuestionNumber" : "Question 53/59",
+            "QuestionName" : "Quelles caractéristiques de l'eau sont optimales pour la production de la vapeur saturée ?",
+            "choice" : [
+                {
+                    "choice" : "TH proche de zéro"
+                },
+                {
+                    "choice" : "Eau osmosée"
+                },
+                {
+                    "choice" : "Eau adoucie"
+                },
+                {
+                    "choice" : "Eau déminéralisée"
+                },
+                {
+                    "choice" : "Eau stérile"
+                }
+            ] 
+        },
+        {
+            "role" : "uniqueChoice",
+            "QuestionNumber" : "Question 54/59",
+            "QuestionName" : "Quel système réduit le risque des dépôts de calcaire :",
+            "choice" : [
+                {
+                    "choice" : "Osmoseur"
+                },
+                {
+                    "choice" : "Adoucisseur"
+                }
+            ] 
+        },
+        {
+            "role" : "uniqueChoice",
+            "QuestionNumber" : "Question 55/59",
+            "QuestionName" : "En routine, à quelle exigence réglementaire minimum doit-on répondre pour l'utilisation d'un équipement sous pression avec présence humaine ?",
+            "choice" : [
+                {
+                    "choice" : "Tout le personnel doit d’être habilité à la conduite de stérilisateur à la vapeur d’eau"
+                },
+                {
+                    "choice" : "Au moins un agent doit être habilité à la conduite de stérilisateur à la vapeur d’eau"
+                }
+            ] 
+        },
+        {
+            "role" : "input",
+            "QuestionNumber" : "Question 56/59",
+            "QuestionName" : "Peut-on stocker les DMR dans le LDI en attendant la recomposition/conditionnement ?",
+            "bigInput" : [
+                {
+                    "0" : "0"
+                }
+            ] 
+        },
+        {
+            "role" : "uniqueChoice",
+            "QuestionNumber" : "Question 57/59",
+            "QuestionName" : "Cocher la bonne affirmation :",
+            "choice" : [
+                {
+                    "choice" : "Sur l'échelle de pression absolue, la valeur la plus basse qui peut être lue sur un Manomètre est de -1 bar."
+                },
+                {
+                    "choice" : "Sur l'échelle de pression relative, la valeur la plus basse qui peut être lue sur un Manomètre est de -1 bar."
+                }
+            ] 
+        },
+        {
+            "role" : "uniqueChoice",
+            "QuestionNumber" : "Question 58/59",
+            "QuestionName" : "Qu'est-ce qu'un D.A.T.I ?",
+            "choice" : [
+                {
+                    "choice" : "Dispositif Autonome pour Travailleur Isolé"
+                },
+                {
+                    "choice" : "Dispositif Alarme pour Travailleur Isolé"
+                }
+            ] 
+        },
+        {
+            "role" : "uniqueChoice",
+            "QuestionNumber" : "Question 59/59",
+            "QuestionName" : "Est-il possible de faire fonctionner d'un stérilisateur à vapeur hors présence humaine permanente ?",
+            "choice" : [
+                {
+                    "choice" : "Impossible"
+                },
+                {
+                    "choice" : "Oui"
+                }
+            ] 
+        },
+        {
+            "role" : "input",
+            "QuestionNumber" : "Félicitations, vous avez fini !",
+            "QuestionName" : "Auriez vous un sujet que vous voulez qu'on aborde en particulier durant cette formation ? (sur votre gestion, sur vos pratiques, sur vos protocoles, sur vos systèmes qualité, sur vos audits internes, sur vos systèmes d'évaluations de vos agents...)",
+            "bigInput" : [
+                {
+                    "0" : "0"
+                }
+            ] 
+        }
+    ]
+}
