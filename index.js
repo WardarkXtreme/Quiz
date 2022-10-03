@@ -37,6 +37,9 @@ btn.addEventListener('click', (e) => {
         container.style.visibility='hidden';
         container.style.zIndex='-100';
         container.style.opacity='0';
+
+        const page = document.querySelector("body");
+        page.style.overflowY = "auto"
     }
 })
 
