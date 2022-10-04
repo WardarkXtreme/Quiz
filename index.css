@@ -350,12 +350,6 @@ input::-o-outer-spin-button {
     .group-question{
         width: 97%;
     }
-    .group-question:nth-child(even){
-        margin:20px 0;
-    }
-    .group-question:nth-child(odd){
-        margin:20px 0;
-    }
     .container-choice{
         width: 100%;
         justify-content:start;
