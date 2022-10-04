@@ -711,6 +711,7 @@ function generer(){
     const getName = window.sessionStorage.getItem("name");
     const getLastName = window.sessionStorage.getItem("lastName")
     const element = document.getElementById('print');
+    const body = document.querySelector("body")
     element.style.minWidth = "800px";
     const opt = {
         margin:       0,
