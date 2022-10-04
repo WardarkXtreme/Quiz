@@ -712,6 +712,7 @@ function generer(){
     const getLastName = window.sessionStorage.getItem("lastName")
     const element = document.getElementById('print');
     const body = document.querySelector("body")
+    body.style.minWidth = "800px";
     element.style.minWidth = "800px";
     // const opt = {
     //     margin:       0,
