@@ -782,5 +782,5 @@ function generer(){
         html2pdf().set(opt).from(element).save()
     }
     setTimeout(resetStyle, 500);
-    setTimeout(save, 1000);
+    setTimeout(save, 2500);
 }
