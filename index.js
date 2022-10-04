@@ -713,16 +713,16 @@ function generer(){
     const element = document.getElementById('print');
     const body = document.querySelector("body")
     element.style.minWidth = "800px";
-    const opt = {
-        margin:       0,
-        filename:     `${getName+'_'+getLastName+'_qcm.pdf'}`,
-        image:        { type: 'jpeg', quality: 9 },
-        html2canvas:  {
-            scale: 0.8
-        },
-        jsPDF:        { unit: 'in', format: 'a4', orientation: 'portrait' }
+    // const opt = {
+    //     margin:       0,
+    //     filename:     `${getName+'_'+getLastName+'_qcm.pdf'}`,
+    //     image:        { type: 'jpeg', quality: 9 },
+    //     html2canvas:  {
+    //         scale: 0.8
+    //     },
+    //     jsPDF:        { unit: 'in', format: 'a4', orientation: 'portrait' }
        
-    };
+    // };
 
-    html2pdf().set(opt).from(element).save();
+    // html2pdf().set(opt).from(element).save();
 }
