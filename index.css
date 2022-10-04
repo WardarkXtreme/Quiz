@@ -311,7 +311,10 @@ input::-o-outer-spin-button {
 .btn-save:active{
     transform: scale(0.7);
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
+    body{
+        overflow-x: hidden;
+    }
     .title_form_1{
         font-size: 2rem;
     }
