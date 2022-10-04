@@ -707,7 +707,37 @@ function checkbox(e){
     }
 }
 
-console.log(document.documentElement.clientWidth)
+let verify = document.body.offsetWidth;
+if(verify <= 600){
+    function responsive(){
+
+        let a = document.querySelector(".title_form_1")
+        let b = document.querySelector(".title_form_2")
+        let c = document.querySelector(".title")
+        let d = document.querySelector(".text_presentation")
+        let e = document.querySelector('.container-choice')
+        let f = document.querySelector(".form")
+        let g = document.querySelector("h3")
+        let h = document.querySelector("h4")
+        
+        a.style.fontSize = "2em"
+        b.style.fontSize = "14px"
+        c.style.fontSize = "1.7rem"
+        d.style.width = "97%";
+        e.style.width = "100%";
+        f.style.justifyContent = "center"
+        f.style.width = "100%"
+        f.style.borderRadius = '0'
+        f.style.boxShadow = 'none'
+        g.style.fontSize = '1.1rem'
+        h.style.fontSize = '0.8rem'
+    }
+    setTimeout(responsive, 100);
+}
+
+
+    
+
 function generer(){
     const getName = window.sessionStorage.getItem("name");
     const getLastName = window.sessionStorage.getItem("lastName")
@@ -715,28 +745,42 @@ function generer(){
     const body = document.querySelector("body")
     body.style.minWidth = "1300px";
     element.style.minWidth = "800px";
-    document.body.style.zoom = "25%";
-    window.resizeTo(1300,19241.5);
-    console.log(document.documentElement.clientWidth)
-    var links = document.getElementsByTagName("link");
-    for (var cl in links)
-    {
-        var link = links[cl];
-        if (link.rel === "stylesheet")
-            link.href += "";
+
+    function resetStyle(){
+        let a = document.querySelector(".title_form_1")
+        let b = document.querySelector(".title_form_2")
+        let c = document.querySelector(".title")
+        let d = document.querySelector(".text_presentation")
+        let e = document.querySelector('.container-choice')
+        let f = document.querySelector(".form")
+        let g = document.querySelector("h3")
+        let h = document.querySelector("h4")
+        
+        a.style.fontSize = "3em"
+        b.style.fontSize = "14px"
+        c.style.fontSize = "3rem"
+        d.style.width = "90%";
+        e.style.width = "fit-content";
+        f.style.justifyContent = "start"
+        f.style.width = "100%"
+        f.style.borderRadius = '0'
+        f.style.boxShadow = 'none'
+        g.style.fontSize = '1.4rem'
+        h.style.fontSize = '1.2rem'
     }
-    // function save() {
-    //     const opt = {
-    //         margin:       0,
-    //         filename:     `${getName+'_'+getLastName+'_qcm.pdf'}`,
-    //         image:        { type: 'jpeg', quality: 9 },
-    //         html2canvas:  {
-    //             scale: 0.8
-    //         },
-    //         jsPDF:        { unit: 'in', format: 'a4', orientation: 'portrait' }
+    function save() {
+        const opt = {
+            margin:       0,
+            filename:     `${getName+'_'+getLastName+'_qcm.pdf'}`,
+            image:        { type: 'jpeg', quality: 9 },
+            html2canvas:  {
+                scale: 0.8
+            },
+            jsPDF:        { unit: 'in', format: 'a4', orientation: 'portrait' }
            
-    //     };
-    //     html2pdf().set(opt).from(element).save()
-    // }
-    // setTimeout(save, 3000);
+        };
+        html2pdf().set(opt).from(element).save()
+    }
+    setTimeout(resetStyle, 500);
+    setTimeout(save, 1000);
 }
