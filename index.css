@@ -10,7 +10,8 @@ body::before{
     position: absolute;
     width: 50px;
     border-bottom: 3px black solid;
-    top: 1116px;
+    /* top: 1116px; */
+    top: 4464px;
 }
 
 h2{
@@ -19,11 +20,14 @@ h2{
 h3{
     font-size: 1.4rem;
     color: cornflowerblue;
-    margin-bottom: 0;
+    margin: 0;
 }
 h4{
     font-size: 1.2rem;
     margin-top: 0;
+}
+textarea{
+    resize: none;
 }
 .container-form{
     display: flex;
@@ -145,8 +149,59 @@ h4{
     padding: 15px;
     border-radius: 15px;
     height: auto;
-    margin: 15px 0;
+    margin-bottom: 10px;
 
+}
+.group-question:nth-child(1){
+    margin-top: 80px;
+}
+.group-question:nth-child(3){
+    margin-top: 100px;
+}
+.group-question:nth-child(3), .group-question:nth-child(4), .group-question:nth-child(5), .group-question:nth-child(6){
+    margin-bottom: 40px;
+}
+.group-question:nth-child(7){
+    margin-top: 99px;
+}
+.group-question:nth-child(10){
+    margin-top: 70px;
+}
+.group-question:nth-child(11), .group-question:nth-child(12){
+    margin-bottom: 40px;
+}
+.group-question:nth-child(13){
+    margin-top: 80px;
+}
+.group-question:nth-child(15){
+    margin: 30px 0;
+}
+.group-question:nth-child(16){
+    margin-top: 80px;
+}
+.group-question:nth-child(30), .group-question:nth-child(34){
+    margin-top: 90px;
+}
+.group-question:nth-child(38){
+    margin-top: 115px;
+}
+.group-question:nth-child(38), .group-question:nth-child(39), .group-question:nth-child(40){
+    margin-bottom: 40px;
+}
+.group-question:nth-child(41), .group-question:nth-child(45){
+    margin-top: 90px;
+}
+.group-question:nth-child(45), .group-question:nth-child(46), .group-question:nth-child(47){
+    margin-bottom: 50px;
+}
+.group-question:nth-child(48){
+    margin-top: 115px;
+}
+.group-question:nth-child(51), .group-question:nth-child(52), .group-question:nth-child(53){
+    margin: 30px 0;
+}
+.group-question:nth-child(57){
+    margin-top: 115px;
 }
 .small-input_gestion{
     display: flex;
@@ -162,7 +217,38 @@ h4{
     box-shadow: rgb(50 50 93 / 25%) 0px 50px 100px -20px, rgb(0 0 0 / 30%) 0px 30px 60px -30px, rgb(10 37 64 / 35%) 0px -2px 6px 0px inset;
 }
 
+.case-number{
+    display: flex;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 1.3em;
+    font-weight:900;
+    color: cornflowerblue;
+    margin-right: 8px;
+}
 
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+	margin:0;
+}
+ 
+input::-o-inner-spin-button,
+input::-o-outer-spin-button { 
+    -o-appearance: none;
+	margin:0
+}
+.middle-input{
+    display: flex;
+    width: 400px;
+    height: 250px;
+}
 .big-input{
     display: flex;
     height: 200px;
@@ -176,7 +262,9 @@ h4{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    width: auto;
 }
+
 .container-choice{
     display: flex;
     padding: 0px 15px;
@@ -184,8 +272,13 @@ h4{
     background: lavender;
     width: fit-content;
     margin-bottom: 15px;
+    justify-content: space-between;
+    align-items: center;
 }
 .checkbox{
     display: flex;
     width: 20px;
+}
+.-string{
+    margin:0;
 }

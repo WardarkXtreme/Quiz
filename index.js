@@ -82,14 +82,12 @@ function createElement(container, element) {
                 newContainer.appendChild(newDiv)
             }
             if(element.middleInput != undefined){    
-                const input = document.createElement("input");
-                input.setAttribute('type', 'text')
+                const input = document.createElement("textarea");
                 input.setAttribute('class', 'middle-input')
                 newContainer.appendChild(input)  
             }
             if(element.bigInput != undefined){    
-                const input = document.createElement("input");
-                input.setAttribute('type', 'text')
+                const input = document.createElement("textarea");
                 input.setAttribute('class', 'big-input')
                 newContainer.appendChild(input)  
             }
@@ -114,17 +112,25 @@ function createElement(container, element) {
                 containerChoice.setAttribute('class', 'container-choice');
                 input.setAttribute('type', 'checkbox');
                 input.setAttribute('class', 'checkbox');
+                input.addEventListener("change", checkbox)
                 input.setAttribute('id', `${number}`);
                 string.setAttribute('class', 'string-choice');
                 string.innerHTML = single.choice;
+                element.choice.length <= 3 ? newDiv.style.width = "fit-content" : null;
+                element.choice.length <= 3 ? containerChoice.style.marginRight = "15px" : null;
                 containerChoice.appendChild(input)
                 containerChoice.appendChild(string)
                 newDiv.appendChild(containerChoice)
             });
             newContainer.appendChild(newDiv)
+            if(element.titleInput != undefined){    
+                const string = document.createElement("p");
+                string.setAttribute('class', '-string')
+                string.innerHTML = element.titleInput
+                newContainer.appendChild(string)  
+            }
             if(element.middleInput != undefined){    
-                const input = document.createElement("input");
-                input.setAttribute('type', 'text')
+                const input = document.createElement("textarea");
                 input.setAttribute('class', 'middle-input')
                 newContainer.appendChild(input)  
             }
@@ -144,6 +150,7 @@ function createElement(container, element) {
                 containerChoice.setAttribute('class', 'container-choice');
                 input.setAttribute('type', 'checkbox');
                 input.setAttribute('class', 'checkbox');
+                input.addEventListener("change", checkbox)
                 string.setAttribute('class', 'string-choice');
                 string.innerHTML = single.choice;
                 containerChoice.appendChild(input)
@@ -151,9 +158,14 @@ function createElement(container, element) {
                 reNewDiv.appendChild(containerChoice)
             });
             newContainer.appendChild(reNewDiv)
+            if(element.titleInput != undefined){    
+                const string = document.createElement("p");
+                string.setAttribute('class', '-string')
+                string.innerHTML = element.titleInput
+                newContainer.appendChild(string)  
+            }
             if(element.middleInput != undefined){    
-                const input = document.createElement("input");
-                input.setAttribute('type', 'text')
+                const input = document.createElement("textarea");
                 input.setAttribute('class', 'middle-input')
                 newContainer.appendChild(input)  
             }
@@ -164,6 +176,8 @@ function createElement(container, element) {
             questionNumber.innerHTML = element.QuestionNumber;               
             newContainer.appendChild(questionNumber);
             newContainer.appendChild(question);
+            const rerenewDiv = document.createElement("div");
+            rerenewDiv.setAttribute('class', 'choice_gestion')
             element.choiceOrder.forEach(single => {
                 const containerChoice = document.createElement("div");
                 const input = document.createElement("input");
@@ -175,16 +189,37 @@ function createElement(container, element) {
                 string.innerHTML = single.choice;
                 containerChoice.appendChild(input)
                 containerChoice.appendChild(string)
-                newContainer.appendChild(containerChoice)
+                rerenewDiv.appendChild(containerChoice)
             });
+            newContainer.appendChild(rerenewDiv)
+            if(element.titleInput != undefined){    
+                const string = document.createElement("p");
+                string.setAttribute('class', '-string')
+                string.innerHTML = element.titleInput
+                newContainer.appendChild(string)  
+            }
             if(element.middleInput != undefined){    
-                const input = document.createElement("input");
-                input.setAttribute('type', 'text')
+                const input = document.createElement("textarea");
                 input.setAttribute('class', 'middle-input')
                 newContainer.appendChild(input)  
             }
             container.appendChild(newContainer)
         break;
+    }
+}
+function checkbox(e){
+    
+    switch(e.target.id){
+        case "101":
+            if (document.getElementById("101").checked == true){
+                document.getElementById("102").checked = false
+            }
+            break;
+        case "102":
+            if (document.getElementById("102").checked == true){
+                document.getElementById("101").checked = false
+            }
+            break;
     }
 }
 
@@ -196,14 +231,13 @@ function generer(){
     const opt = {
         margin:       0,
         filename:     `${getName+'_'+getLastName+'_qcm.pdf'}`,
-        image:        { type: 'jpeg', quality: 0.98 },
+        image:        { type: 'jpeg', quality: 9 },
         html2canvas:  {
-            scale: 2  
+            scale: 0.8
         },
         jsPDF:        { unit: 'in', format: 'a4', orientation: 'portrait' }
        
     };
 
     html2pdf().set(opt).from(element).save();
-
 }

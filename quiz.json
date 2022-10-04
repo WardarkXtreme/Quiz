@@ -131,7 +131,7 @@
         {
             "role" : "orderChoice",
             "QuestionNumber" : "Question 9/59",
-            "QuestionName" : "Mettez dans l'ordre les étapes d’un cycle de LDI :",
+            "QuestionName" : "Numérotez dans l'ordre les étapes d’un cycle de LDI :",
             "choiceOrder" : [
                 {
                     "choice" : "Prélavage"
@@ -744,7 +744,7 @@
         {
             "role" : "orderChoice",
             "QuestionNumber" : "Question 49/59",
-            "QuestionName" : "Mettez dans l'ordre les grandes étapes de la stérilisation :",
+            "QuestionName" : "Numérotez dans l'ordre les grandes étapes de la stérilisation :",
             "choiceOrder" : [
                 {
                     "choice" : "Livraison des DMR au bloc"
@@ -769,7 +769,7 @@
         {
             "role" : "orderChoice",
             "QuestionNumber" : "Question 50/59",
-            "QuestionName" : "Mettez dans l'ordre les actions qui rentre dans le process de validation avant de libérer la charge :",
+            "QuestionName" : "Numérotez dans l'ordre les actions qui rentre dans le process de validation avant de libérer la charge :",
             "choiceOrder" : [
                 {
                     "choice" : "vérifier l'intégrité de chaque unité stérile"
