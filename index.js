@@ -715,9 +715,9 @@ function generer(){
     const opt = {
         margin:       0,
         filename:     `${getName+'_'+getLastName+'_qcm.pdf'}`,
-        image:        { type: 'jpeg', quality: 9 },
+        image:        { type: 'jpeg', quality: 1 },
         html2canvas:  {
-            scale: 0.8
+            scale: 0.9
         },
         jsPDF:        { unit: 'in', format: 'a4', orientation: 'portrait' }
        
