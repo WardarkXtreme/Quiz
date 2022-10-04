@@ -727,5 +727,5 @@ function generer(){
         };
         html2pdf().set(opt).from(element).save()
     }
-    setTimeout(save, 4000);
+    setTimeout(save, 8000);
 }
