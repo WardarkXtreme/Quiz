@@ -707,6 +707,7 @@ function checkbox(e){
     }
 }
 
+console.log(document.documentElement.clientWidth)
 function generer(){
     const getName = window.sessionStorage.getItem("name");
     const getLastName = window.sessionStorage.getItem("lastName")
@@ -714,6 +715,8 @@ function generer(){
     const body = document.querySelector("body")
     body.style.minWidth = "1300px";
     element.style.minWidth = "800px";
+    window.resizeTo(1300,19241.5);
+    console.log(document.documentElement.clientWidth)
     function save() {
         const opt = {
             margin:       0,
@@ -727,5 +730,5 @@ function generer(){
         };
         html2pdf().set(opt).from(element).save()
     }
-    setTimeout(save, 8000);
+    setTimeout(save, 3000);
 }

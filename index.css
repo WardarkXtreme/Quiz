@@ -327,7 +327,7 @@ input::-o-outer-spin-button {
     .title{
         font-size: 1.7rem
     }
-    /* .text_presentation{
+    .text_presentation{
         width: 80%;
     }
     .group-id{
@@ -339,7 +339,7 @@ input::-o-outer-spin-button {
     .middle-input{
         width: 99%;
         padding: 1px;
-    } */
+    }
     h3{
         font-size: 1.1rem;
         margin-top: 7px;
@@ -347,7 +347,7 @@ input::-o-outer-spin-button {
     h4{
         font-size: 0.8rem;
     }
-    /* .group-question{
+    .group-question{
         width: 97%;
     }
     .container-choice{
@@ -359,5 +359,5 @@ input::-o-outer-spin-button {
         border-radius: 0;
         box-shadow: none;
         border: none;
-    } */
+    }
 }
