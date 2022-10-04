@@ -712,16 +712,19 @@ function generer(){
     const getLastName = window.sessionStorage.getItem("lastName")
     const element = document.getElementById('print');
     element.style.width = "800px";
-    const opt = {
-        margin:       0,
-        filename:     `${getName+'_'+getLastName+'_qcm.pdf'}`,
-        image:        { type: 'jpeg', quality: 1 },
-        html2canvas:  {
-            scale: 0.9
-        },
-        jsPDF:        { unit: 'in', format: 'a4', orientation: 'portrait' }
-       
-    };
-
-    html2pdf().set(opt).from(element).save();
+    function savepdf(){
+        const opt = {
+            margin:       0,
+            filename:     `${getName+'_'+getLastName+'_qcm.pdf'}`,
+            image:        { type: 'jpeg', quality: 1 },
+            html2canvas:  {
+                scale: 0.9
+            },
+            jsPDF:        { unit: 'in', format: 'a4', orientation: 'portrait' }
+           
+        };
+    
+        html2pdf().set(opt).from(element).save();
+    }
+    setTimeout(savepdf,1000);
 }
