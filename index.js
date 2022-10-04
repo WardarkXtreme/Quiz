@@ -89,6 +89,23 @@ function createElement(container, element) {
             if(element.bigInput != undefined){    
                 const input = document.createElement("textarea");
                 input.setAttribute('class', 'big-input')
+                input.addEventListener('keypress', (e) => {
+                    console.log(e)
+                    console.log(input.value.length)
+                    if(e.code === "Enter"){
+                        e.preventDefault()
+                    }
+                    if(e.code === "NumpadEnter"){
+                        e.preventDefault()
+                    }
+                    if(input.value.length === 600){
+                        e.preventDefault()
+                    }
+                    input.onpaste = (e)=> {
+                        e.preventDefault();
+                    }
+
+                })
                 newContainer.appendChild(input)  
             }
             container.appendChild(newContainer)
@@ -694,7 +711,7 @@ function generer(){
     const getName = window.sessionStorage.getItem("name");
     const getLastName = window.sessionStorage.getItem("lastName")
     const element = document.getElementById('print');
-    element.style.width = "800px";
+    element.style.minWidth = "800px";
     const opt = {
         margin:       0,
         filename:     `${getName+'_'+getLastName+'_qcm.pdf'}`,
