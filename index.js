@@ -773,9 +773,9 @@ function generer(){
         const opt = {
             margin:       0,
             filename:     `${getName+'_'+getLastName+'_qcm.pdf'}`,
-            image:        { type: 'jpeg', quality: 9 },
+            image:        { type: 'jpeg', quality: 1 },
             html2canvas:  {
-                scale: 0.8
+                scale: 0.7
             },
             jsPDF:        { unit: 'in', format: 'a4', orientation: 'portrait' }
            
@@ -783,5 +783,5 @@ function generer(){
         html2pdf().set(opt).from(element).save()
     }
     // setTimeout(resetStyle, 500);
-    setTimeout(save, 2500);
+    setTimeout(save, 500);
 }
