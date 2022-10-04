@@ -1,5 +1,6 @@
 body{
     overflow-y: hidden;
+    width: 100%;
     margin: 0;
     display: flex;
     justify-content:center;
@@ -314,6 +315,7 @@ input::-o-outer-spin-button {
 @media screen and (max-width: 600px) {
     body{
         overflow-x: hidden;
+        width: 100vw;
     }
     .title_form_1{
         font-size: 2rem;
