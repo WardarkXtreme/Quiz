@@ -716,6 +716,15 @@ function generer(){
     body.style.minWidth = "1300px";
     element.style.minWidth = "800px";
     document.body.style.zoom = "25%";
+    window.resizeTo(1300,19241.5);
+    console.log(document.documentElement.clientWidth)
+    var links = document.getElementsByTagName("link");
+    for (var cl in links)
+    {
+        var link = links[cl];
+        if (link.rel === "stylesheet")
+            link.href += "";
+    }
     // function save() {
     //     const opt = {
     //         margin:       0,
