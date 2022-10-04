@@ -714,16 +714,18 @@ function generer(){
     const body = document.querySelector("body")
     body.style.minWidth = "1300px";
     element.style.minWidth = "800px";
-    // const opt = {
-    //     margin:       0,
-    //     filename:     `${getName+'_'+getLastName+'_qcm.pdf'}`,
-    //     image:        { type: 'jpeg', quality: 9 },
-    //     html2canvas:  {
-    //         scale: 0.8
-    //     },
-    //     jsPDF:        { unit: 'in', format: 'a4', orientation: 'portrait' }
-       
-    // };
-
-    // html2pdf().set(opt).from(element).save();
+    function save() {
+        const opt = {
+            margin:       0,
+            filename:     `${getName+'_'+getLastName+'_qcm.pdf'}`,
+            image:        { type: 'jpeg', quality: 9 },
+            html2canvas:  {
+                scale: 0.8
+            },
+            jsPDF:        { unit: 'in', format: 'a4', orientation: 'portrait' }
+           
+        };
+        html2pdf().set(opt).from(element).save()
+    }
+    setTimeout(save, 4000);
 }
