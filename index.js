@@ -744,6 +744,7 @@ function generer(){
     const element = document.getElementById('print');
     const body = document.querySelector("body")
     body.style.minWidth = "1300px";
+    body.style.maxHeight = "19224.4";
     element.style.minWidth = "800px";
 
     // function resetStyle(){
