@@ -47,7 +47,6 @@ btn.addEventListener('click', (e) => {
 fetch("./quiz.json")
 .then((response) => response.json())
 .then((jsondata) => {
-    console.log(jsondata.QCM)
     jsondata.QCM.forEach(element => {
         createElement(document.querySelector(".qcm"), element)
     })
@@ -211,7 +210,6 @@ function createElement(container, element) {
     }
 }
 function checkbox(e){
-    console.log(e.target.id);
     switch(e.target.id){
         case "101":
             if (document.getElementById("101").checked == true){
