@@ -710,25 +710,14 @@ function generer(){
     const getName = window.sessionStorage.getItem("name");
     const getLastName = window.sessionStorage.getItem("lastName")
     const element = document.getElementById('print');
-    // element.style.width = "800px";
-    // const opt = {
-    //     margin:       0,
-    //     filename:     `${getName+'_'+getLastName+'_qcm.pdf'}`,
-    //     image:        { type: 'jpeg', quality: 9 },
-    //     html2canvas:  {
-    //         scale: 0.8
-    //     },
-    //     jsPDF:        { unit: 'mm', format: 'letter', orientation: 'portrait' }
-       
-    // };
-
-    // html2pdf().set(opt).from(element).save();
+    element.style.minWidth = "800px"
+    
 
     html2canvas(document.getElementById("print")).then(canvas => {
         const a = document.createElement('a');
         let link = canvas.toDataURL();
         a.href = link
-        a.download = "file.png"
+        a.download = `${getName+'_'+getLastName+'_qcm.png'}`
         setTimeout(() => {
             a.click()
         }, 1000);
