@@ -710,31 +710,18 @@ function checkbox(e){
 function generer(){
     const getName = window.sessionStorage.getItem("name");
     const getLastName = window.sessionStorage.getItem("lastName")
+    document.getElementById("viewport").setAttribute("content", "width=1200px");
     
     html2canvas(document.getElementById("print")).then(canvas => {
-        // const a = document.createElement('a');
+        const a = document.createElement('a');
         let link = canvas.toDataURL();
-        // a.href = img.src.value
-        // a.download = `${getName+'_'+getLastName+'_qcm.png'}`
-        // setTimeout(() => {
-        //     a.click()
-        // }, 1000);
-        
-
-        const img = document.createElement('img')
-        img.type= "image/png"
-        img.src = link
-        img.style.display="flex"
-        img.style.minWidth="800px"
-        img.style.minHeigth="fit-content"
-        document.body.appendChild(img)
-        
-        const a = document.createElement('a')
-        a.href = img.src
+        a.href = link
         a.download = `${getName+'_'+getLastName+'_qcm.png'}`
         setTimeout(() => {
             a.click()
         }, 1000);
+            
     })
+    document.getElementById("viewport").setAttribute("content", "width=device-width, initial-scale=1");
 }
 
