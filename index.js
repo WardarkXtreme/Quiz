@@ -709,10 +709,10 @@ function checkbox(e){
 function generer(){
     const getName = window.sessionStorage.getItem("name");
     const getLastName = window.sessionStorage.getItem("lastName")
+    const container = document.querySelector('body')
     const element = document.getElementById('print');
+    container.style.minWidth = "1300px"
     element.style.minWidth = "800px"
-    
-
     html2canvas(document.getElementById("print")).then(canvas => {
         const a = document.createElement('a');
         let link = canvas.toDataURL();
