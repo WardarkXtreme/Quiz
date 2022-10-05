@@ -40,6 +40,7 @@ btn.addEventListener('click', (e) => {
 
         const page = document.querySelector("body");
         page.style.overflowY = "auto"
+        page.style.overflow = "visible"
     }
 })
 
