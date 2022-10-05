@@ -69,7 +69,7 @@ fetch("./quiz.json")
         liste[48].style.marginBottom="130px"
     }
     if(screen.width < 1024) {
-        liste[1].style.marginTop="150px"
+        liste[0].style.marginTop="150px"
         
     }
 })
