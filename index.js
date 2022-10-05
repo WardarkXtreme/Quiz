@@ -714,7 +714,7 @@ function generer(){
     
     html2canvas(document.getElementById("print")).then(canvas => {
         const a = document.createElement('a');
-        let link = canvas.toDataURL();
+        let link = canvas.toDataURL('image/png');
         a.href = link
         a.download = `${getName+'_'+getLastName+'_qcm.png'}`
         setTimeout(() => {
