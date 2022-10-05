@@ -49,6 +49,29 @@ fetch("./quiz.json")
     jsondata.QCM.forEach(element => {
         createElement(document.querySelector(".qcm"), element)
     })
+    const liste = document.querySelectorAll('.group-question');
+    if(screen.width > 1024) {
+        liste[2].style.marginBottom="100px"
+        liste[6].style.marginBottom="100px"
+        liste[13].style.marginBottom="100px"
+        liste[22].style.marginBottom="0px"
+        liste[23].style.marginBottom="0px"
+        liste[24].style.marginBottom="0px"
+        liste[25].style.marginBottom="100px"
+        liste[26].style.marginBottom="100px"
+        liste[35].style.marginBottom="100px"
+        liste[36].style.marginBottom="100px"
+        liste[37].style.marginBottom="100px"
+        liste[40].style.marginBottom="10px"
+        liste[41].style.marginBottom="10px"
+        liste[42].style.marginBottom="10px"
+        liste[45].style.marginBottom="130px"
+        liste[48].style.marginBottom="130px"
+    }
+    if(screen.width < 1024) {
+        liste[1].style.marginTop="150px"
+        
+    }
 })
 .catch(error => console.log(error));
 
@@ -705,6 +728,10 @@ function checkbox(e){
         break;
     }
 }
+
+const liste = document.querySelectorAll('.group-question');
+
+setTimeout(console.log(liste), 500)
 
 function generer(){
     const getName = window.sessionStorage.getItem("name");
