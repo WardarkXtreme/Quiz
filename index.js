@@ -43,9 +43,13 @@ btn.addEventListener('click', (e) => {
     }
 })
 
+let file;
+
+
 fetch("./quiz.json")
 .then((response) => response.json())
 .then((jsondata) => {
+    file = jsondata
     jsondata.QCM.forEach(element => {
         createElement(document.querySelector(".qcm"), element)
     })
@@ -75,6 +79,10 @@ fetch("./quiz.json")
 })
 .catch(error => console.log(error));
 
+setTimeout(() => {
+    console.log(file)
+}, 1000);
+
 let number = 100;
 let numberTwo = 1000;
 
@@ -99,6 +107,14 @@ function createElement(container, element) {
                     const input = document.createElement("input");
                     input.setAttribute('type', 'text')
                     input.setAttribute('class', 'small-input')
+                    input.addEventListener('change', ()=>{
+                        for(let i = 0; i<document.querySelectorAll('.small-input').length; i++){
+                            console.log(document.querySelectorAll('.small-input')[i].value);
+                            
+                            file.QCM[0].smallInput[i] = document.querySelectorAll('.small-input')[i].value
+                        }
+                        console.log(file)
+                    })
                     newDiv.appendChild(input);
                 });
                 newContainer.appendChild(newDiv)
@@ -106,14 +122,22 @@ function createElement(container, element) {
             if(element.middleInput != undefined){    
                 const input = document.createElement("textarea");
                 input.setAttribute('class', 'middle-input')
+                input.addEventListener('change', ()=>{
+                    for(let i = 0; i<document.querySelectorAll('.middle-input').length; i++){
+                        console.log(document.querySelectorAll('.middle-input')[i].value);
+                        
+                        file.QCM[0].middleInput[i] = document.querySelectorAll('.middle-input')[i].value
+                    }
+                    console.log(file)
+                })
                 newContainer.appendChild(input)  
             }
             if(element.bigInput != undefined){    
                 const input = document.createElement("textarea");
                 input.setAttribute('class', 'big-input')
                 input.addEventListener('keypress', (e) => {
-                    console.log(e)
-                    console.log(input.value.length)
+                    
+                    
                     if(e.code === "Enter"){
                         e.preventDefault()
                     }
@@ -127,6 +151,33 @@ function createElement(container, element) {
                         e.preventDefault();
                     }
 
+                })
+                input.addEventListener('change', ()=>{
+                    const bigin = document.querySelectorAll('.big-input')
+                    console.log(bigin);
+                    file.QCM[1].bigInput[0] = bigin[0].value
+                    file.QCM[30].bigInput[0] = bigin[1].value
+                    file.QCM[31].bigInput[0] = bigin[2].value
+                    file.QCM[41].bigInput[0] = bigin[3].value
+                    file.QCM[42].bigInput[0] = bigin[4].value
+                    file.QCM[44].bigInput[0] = bigin[5].value
+                    file.QCM[45].bigInput[0] = bigin[6].value
+                    file.QCM[47].bigInput[0] = bigin[7].value
+                    file.QCM[55].bigInput[0] = bigin[8].value
+                    file.QCM[59].bigInput[0] = bigin[9].value
+                    // bigin.forEach(element => {
+                    //     for(let i = 0; i<bigin.length; i++){
+                    //         console.log(bigin[i]);
+                    //         console.log(i)
+                    //         if(i == 0) {
+                    //                 file.QCM[1].bigInput[0] = element.value
+                    //                 console.log('coucou')
+                    //             break;
+                    //         }
+                            
+                    //     }
+                    // });
+                    console.log(file)
                 })
                 newContainer.appendChild(input)  
             }
@@ -733,14 +784,21 @@ const liste = document.querySelectorAll('.group-question');
 
 setTimeout(console.log(liste), 500)
 
+
+
 function generer(){
+   
+
+    const urlFile = window.URL.createObjectURL(new Blob([JSON.stringify(file)], {type: "application/json"}))
     const getName = window.sessionStorage.getItem("name");
     const getLastName = window.sessionStorage.getItem("lastName")
     const element = document.getElementById('print');
 
+    
+
     const a = document.createElement('a')
-    a.href= ("./quiz.json")
-    a.download = ('name.json')
+    a.href= (urlFile)
+    a.download = `${getName+'_'+getLastName+'_qcm.json'}`
     a.click()
     
     // if(screen.width < 1024) {
