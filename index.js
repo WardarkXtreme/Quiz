@@ -40,6 +40,11 @@ btn.addEventListener('click', (e) => {
 
         const page = document.querySelector("body");
         page.style.overflowY = "auto"
+
+        file.QCM[60].name = getName
+        file.QCM[60].lastName = getLastName
+        file.QCM[60].school = getSchool
+        file.QCM[60].mail = getMail
     }
 })
 
@@ -53,35 +58,8 @@ fetch("./quiz.json")
     jsondata.QCM.forEach(element => {
         createElement(document.querySelector(".qcm"), element)
     })
-    const liste = document.querySelectorAll('.group-question');
-    if(screen.width > 1024) {
-        liste[2].style.marginBottom="100px"
-        liste[6].style.marginBottom="100px"
-        liste[13].style.marginBottom="100px"
-        liste[22].style.marginBottom="0px"
-        liste[23].style.marginBottom="0px"
-        liste[24].style.marginBottom="0px"
-        liste[25].style.marginBottom="100px"
-        liste[26].style.marginBottom="100px"
-        liste[35].style.marginBottom="100px"
-        liste[36].style.marginBottom="100px"
-        liste[37].style.marginBottom="100px"
-        liste[40].style.marginBottom="10px"
-        liste[41].style.marginBottom="10px"
-        liste[42].style.marginBottom="10px"
-        liste[45].style.marginBottom="130px"
-        liste[48].style.marginBottom="130px"
-    }
-    if(screen.width < 1024) {
-        liste[0].style.marginTop="170px"
-        
-    }
 })
 .catch(error => console.log(error));
-
-setTimeout(() => {
-    console.log(file)
-}, 1000);
 
 let number = 100;
 let numberTwo = 1000;
@@ -108,12 +86,9 @@ function createElement(container, element) {
                     input.setAttribute('type', 'text')
                     input.setAttribute('class', 'small-input')
                     input.addEventListener('change', ()=>{
-                        for(let i = 0; i<document.querySelectorAll('.small-input').length; i++){
-                            console.log(document.querySelectorAll('.small-input')[i].value);
-                            
+                        for(let i = 0; i<document.querySelectorAll('.small-input').length; i++){                            
                             file.QCM[0].smallInput[i] = document.querySelectorAll('.small-input')[i].value
                         }
-                        console.log(file)
                     })
                     newDiv.appendChild(input);
                 });
@@ -122,22 +97,11 @@ function createElement(container, element) {
             if(element.middleInput != undefined){    
                 const input = document.createElement("textarea");
                 input.setAttribute('class', 'middle-input')
-                input.addEventListener('change', ()=>{
-                    for(let i = 0; i<document.querySelectorAll('.middle-input').length; i++){
-                        console.log(document.querySelectorAll('.middle-input')[i].value);
-                        
-                        file.QCM[0].middleInput[i] = document.querySelectorAll('.middle-input')[i].value
-                    }
-                    console.log(file)
+                input.addEventListener('change', ()=>{               
+                    const middlein = document.querySelectorAll('.middle-input')
+                    file.QCM[9].middleInput[0] = middlein[1].value 
                 })
-                newContainer.appendChild(input)  
-            }
-            if(element.bigInput != undefined){    
-                const input = document.createElement("textarea");
-                input.setAttribute('class', 'big-input')
                 input.addEventListener('keypress', (e) => {
-                    
-                    
                     if(e.code === "Enter"){
                         e.preventDefault()
                     }
@@ -150,11 +114,28 @@ function createElement(container, element) {
                     input.onpaste = (e)=> {
                         e.preventDefault();
                     }
-
+                })
+                newContainer.appendChild(input)  
+            }
+            if(element.bigInput != undefined){    
+                const input = document.createElement("textarea");
+                input.setAttribute('class', 'big-input')
+                input.addEventListener('keypress', (e) => {
+                    if(e.code === "Enter"){
+                        e.preventDefault()
+                    }
+                    if(e.code === "NumpadEnter"){
+                        e.preventDefault()
+                    }
+                    if(input.value.length === 600){
+                        e.preventDefault()
+                    }
+                    input.onpaste = (e)=> {
+                        e.preventDefault();
+                    }
                 })
                 input.addEventListener('change', ()=>{
                     const bigin = document.querySelectorAll('.big-input')
-                    console.log(bigin);
                     file.QCM[1].bigInput[0] = bigin[0].value
                     file.QCM[30].bigInput[0] = bigin[1].value
                     file.QCM[31].bigInput[0] = bigin[2].value
@@ -165,19 +146,6 @@ function createElement(container, element) {
                     file.QCM[47].bigInput[0] = bigin[7].value
                     file.QCM[55].bigInput[0] = bigin[8].value
                     file.QCM[59].bigInput[0] = bigin[9].value
-                    // bigin.forEach(element => {
-                    //     for(let i = 0; i<bigin.length; i++){
-                    //         console.log(bigin[i]);
-                    //         console.log(i)
-                    //         if(i == 0) {
-                    //                 file.QCM[1].bigInput[0] = element.value
-                    //                 console.log('coucou')
-                    //             break;
-                    //         }
-                            
-                    //     }
-                    // });
-                    console.log(file)
                 })
                 newContainer.appendChild(input)  
             }
@@ -222,6 +190,29 @@ function createElement(container, element) {
             if(element.middleInput != undefined){    
                 const input = document.createElement("textarea");
                 input.setAttribute('class', 'middle-input')
+                input.addEventListener('change', ()=>{               
+                    const middlein = document.querySelectorAll('.middle-input')
+                    file.QCM[7].middleInput[0] = middlein[0].value 
+                    file.QCM[10].middleInput[0] = middlein[2].value 
+                    file.QCM[14].middleInput[0] = middlein[3].value 
+                    file.QCM[15].middleInput[0] = middlein[4].value 
+                    file.QCM[36].middleInput[0] = middlein[5].value 
+                    file.QCM[37].middleInput[0] = middlein[6].value 
+                })
+                input.addEventListener('keypress', (e) => {
+                    if(e.code === "Enter"){
+                        e.preventDefault()
+                    }
+                    if(e.code === "NumpadEnter"){
+                        e.preventDefault()
+                    }
+                    if(input.value.length === 600){
+                        e.preventDefault()
+                    }
+                    input.onpaste = (e)=> {
+                        e.preventDefault();
+                    }
+                })
                 newContainer.appendChild(input)  
             }
             container.appendChild(newContainer)
@@ -259,6 +250,20 @@ function createElement(container, element) {
             if(element.middleInput != undefined){    
                 const input = document.createElement("textarea");
                 input.setAttribute('class', 'middle-input')
+                input.addEventListener('keypress', (e) => {
+                    if(e.code === "Enter"){
+                        e.preventDefault()
+                    }
+                    if(e.code === "NumpadEnter"){
+                        e.preventDefault()
+                    }
+                    if(input.value.length === 600){
+                        e.preventDefault()
+                    }
+                    input.onpaste = (e)=> {
+                        e.preventDefault();
+                    }
+                })
                 newContainer.appendChild(input)  
             }
             container.appendChild(newContainer)
@@ -277,6 +282,30 @@ function createElement(container, element) {
                 containerChoice.setAttribute('class', 'container-choice');
                 input.setAttribute('type', 'number');
                 input.setAttribute('class', 'case-number');
+                input.addEventListener('change', ()=>{               
+                    const orderin = document.querySelectorAll('.case-number')
+                    file.QCM[8].choiceOrder[0].value = orderin[0].value
+                    file.QCM[8].choiceOrder[1].value = orderin[1].value
+                    file.QCM[8].choiceOrder[2].value = orderin[2].value
+                    file.QCM[8].choiceOrder[3].value = orderin[3].value
+                    file.QCM[8].choiceOrder[4].value = orderin[4].value
+                    file.QCM[8].choiceOrder[5].value = orderin[5].value
+                    file.QCM[40].choiceOrder[0].value = orderin[6].value
+                    file.QCM[40].choiceOrder[1].value = orderin[7].value
+                    file.QCM[40].choiceOrder[2].value = orderin[8].value
+                    file.QCM[40].choiceOrder[3].value = orderin[9].value
+                    file.QCM[48].choiceOrder[0].value = orderin[10].value
+                    file.QCM[48].choiceOrder[1].value = orderin[11].value
+                    file.QCM[48].choiceOrder[2].value = orderin[12].value
+                    file.QCM[48].choiceOrder[3].value = orderin[13].value
+                    file.QCM[48].choiceOrder[4].value = orderin[14].value
+                    file.QCM[48].choiceOrder[5].value = orderin[15].value
+                    file.QCM[49].choiceOrder[0].value = orderin[16].value
+                    file.QCM[49].choiceOrder[1].value = orderin[17].value
+                    file.QCM[49].choiceOrder[2].value = orderin[18].value
+                    file.QCM[49].choiceOrder[3].value = orderin[19].value
+                    file.QCM[49].choiceOrder[4].value = orderin[20].value
+                })
                 string.setAttribute('class', 'string-choice');
                 string.innerHTML = single.choice;
                 containerChoice.appendChild(input)
@@ -293,22 +322,31 @@ function createElement(container, element) {
             if(element.middleInput != undefined){    
                 const input = document.createElement("textarea");
                 input.setAttribute('class', 'middle-input')
+                input.addEventListener('change', ()=>{               
+                    const middlein = document.querySelectorAll('.middle-input')
+                    file.QCM[49].middleInput[0] = middlein[7].value
+                })
                 newContainer.appendChild(input)  
             }
             container.appendChild(newContainer)
         break;
     }
 }
+
 function checkbox(e){
     switch(e.target.id){
         case "101":
             if (document.getElementById("101").checked == true){
                 document.getElementById("102").checked = false
+                file.QCM[2].choice[0].checked = document.getElementById("101").checked
+                file.QCM[2].choice[1].checked = document.getElementById("102").checked
             }
             break;
         case "102":
             if (document.getElementById("102").checked == true){
                 document.getElementById("101").checked = false
+                file.QCM[2].choice[0].checked = document.getElementById("101").checked
+                file.QCM[2].choice[1].checked = document.getElementById("102").checked
             }
             break;
         case "103":
@@ -316,6 +354,10 @@ function checkbox(e){
                 document.getElementById("104").checked = false
                 document.getElementById("105").checked = false
                 document.getElementById("106").checked = false
+                file.QCM[3].choice[0].checked = document.getElementById("103").checked
+                file.QCM[3].choice[1].checked = document.getElementById("104").checked
+                file.QCM[3].choice[2].checked = document.getElementById("105").checked
+                file.QCM[3].choice[3].checked = document.getElementById("106").checked
             }
             break;
         case "104":
@@ -323,6 +365,10 @@ function checkbox(e){
                 document.getElementById("103").checked = false
                 document.getElementById("105").checked = false
                 document.getElementById("106").checked = false
+                file.QCM[3].choice[0].checked = document.getElementById("103").checked
+                file.QCM[3].choice[1].checked = document.getElementById("104").checked
+                file.QCM[3].choice[2].checked = document.getElementById("105").checked
+                file.QCM[3].choice[3].checked = document.getElementById("106").checked
             }
             break;
         case "105":
@@ -330,6 +376,10 @@ function checkbox(e){
                 document.getElementById("104").checked = false
                 document.getElementById("103").checked = false
                 document.getElementById("106").checked = false
+                file.QCM[3].choice[0].checked = document.getElementById("103").checked
+                file.QCM[3].choice[1].checked = document.getElementById("104").checked
+                file.QCM[3].choice[2].checked = document.getElementById("105").checked
+                file.QCM[3].choice[3].checked = document.getElementById("106").checked
             }
             break;
         case "106":
@@ -337,16 +387,24 @@ function checkbox(e){
                 document.getElementById("104").checked = false
                 document.getElementById("105").checked = false
                 document.getElementById("103").checked = false
+                file.QCM[3].choice[0].checked = document.getElementById("103").checked
+                file.QCM[3].choice[1].checked = document.getElementById("104").checked
+                file.QCM[3].choice[2].checked = document.getElementById("105").checked
+                file.QCM[3].choice[3].checked = document.getElementById("106").checked
             }
         break;
         case "107":
             if (document.getElementById("107").checked == true){
                 document.getElementById("108").checked = false
+                file.QCM[4].choice[0].checked = document.getElementById("107").checked
+                file.QCM[4].choice[1].checked = document.getElementById("108").checked
             }
         break;
         case "108":
             if (document.getElementById("108").checked == true){
                 document.getElementById("107").checked = false
+                file.QCM[4].choice[0].checked = document.getElementById("107").checked
+                file.QCM[4].choice[1].checked = document.getElementById("108").checked
             }
         break;
         case "109":
@@ -354,6 +412,10 @@ function checkbox(e){
                 document.getElementById("110").checked = false
                 document.getElementById("111").checked = false
                 document.getElementById("112").checked = false
+                file.QCM[5].choice[0].checked = document.getElementById("109").checked
+                file.QCM[5].choice[1].checked = document.getElementById("110").checked
+                file.QCM[5].choice[2].checked = document.getElementById("111").checked
+                file.QCM[5].choice[3].checked = document.getElementById("112").checked
             }
         break;
         case "110":
@@ -361,6 +423,10 @@ function checkbox(e){
                 document.getElementById("109").checked = false
                 document.getElementById("111").checked = false
                 document.getElementById("112").checked = false
+                file.QCM[5].choice[0].checked = document.getElementById("109").checked
+                file.QCM[5].choice[1].checked = document.getElementById("110").checked
+                file.QCM[5].choice[2].checked = document.getElementById("111").checked
+                file.QCM[5].choice[3].checked = document.getElementById("112").checked
             }
         break;
         case "111":
@@ -368,6 +434,10 @@ function checkbox(e){
                 document.getElementById("109").checked = false
                 document.getElementById("110").checked = false
                 document.getElementById("112").checked = false
+                file.QCM[5].choice[0].checked = document.getElementById("109").checked
+                file.QCM[5].choice[1].checked = document.getElementById("110").checked
+                file.QCM[5].choice[2].checked = document.getElementById("111").checked
+                file.QCM[5].choice[3].checked = document.getElementById("112").checked
             }
         break;
         case "112":
@@ -375,204 +445,298 @@ function checkbox(e){
                 document.getElementById("109").checked = false
                 document.getElementById("110").checked = false
                 document.getElementById("111").checked = false
+                file.QCM[5].choice[0].checked = document.getElementById("109").checked
+                file.QCM[5].choice[1].checked = document.getElementById("110").checked
+                file.QCM[5].choice[2].checked = document.getElementById("111").checked
+                file.QCM[5].choice[3].checked = document.getElementById("112").checked
             }
         break;
         case "113":
             if (document.getElementById("113").checked == true){
                 document.getElementById("114").checked = false
+                file.QCM[7].choice[0].checked = document.getElementById("113").checked
+                file.QCM[7].choice[1].checked = document.getElementById("114").checked
             }
         break;
         case "114":
             if (document.getElementById("114").checked == true){
                 document.getElementById("113").checked = false
+                file.QCM[7].choice[0].checked = document.getElementById("113").checked
+                file.QCM[7].choice[1].checked = document.getElementById("114").checked
             }
         break;
         case "115":
             if (document.getElementById("115").checked == true){
                 document.getElementById("116").checked = false
                 document.getElementById("117").checked = false
+                file.QCM[10].choice[0].checked = document.getElementById("115").checked
+                file.QCM[10].choice[1].checked = document.getElementById("116").checked
+                file.QCM[10].choice[2].checked = document.getElementById("117").checked
             }
         break;
         case "116":
             if (document.getElementById("116").checked == true){
                 document.getElementById("115").checked = false
                 document.getElementById("117").checked = false
+                file.QCM[10].choice[0].checked = document.getElementById("115").checked
+                file.QCM[10].choice[1].checked = document.getElementById("116").checked
+                file.QCM[10].choice[2].checked = document.getElementById("117").checked
             }
         break;
         case "117":
             if (document.getElementById("117").checked == true){
                 document.getElementById("115").checked = false
                 document.getElementById("116").checked = false
+                file.QCM[10].choice[0].checked = document.getElementById("115").checked
+                file.QCM[10].choice[1].checked = document.getElementById("116").checked
+                file.QCM[10].choice[2].checked = document.getElementById("117").checked
             }
         break;
         case "118":
             if (document.getElementById("118").checked == true){
                 document.getElementById("119").checked = false
                 document.getElementById("120").checked = false
+                file.QCM[11].choice[0].checked = document.getElementById("118").checked
+                file.QCM[11].choice[1].checked = document.getElementById("119").checked
+                file.QCM[11].choice[2].checked = document.getElementById("120").checked
             }
         break;
         case "119":
             if (document.getElementById("119").checked == true){
                 document.getElementById("118").checked = false
                 document.getElementById("120").checked = false
+                file.QCM[11].choice[0].checked = document.getElementById("118").checked
+                file.QCM[11].choice[1].checked = document.getElementById("119").checked
+                file.QCM[11].choice[2].checked = document.getElementById("120").checked
             }
         break;
         case "120":
             if (document.getElementById("120").checked == true){
                 document.getElementById("118").checked = false
                 document.getElementById("119").checked = false
+                file.QCM[11].choice[0].checked = document.getElementById("118").checked
+                file.QCM[11].choice[1].checked = document.getElementById("119").checked
+                file.QCM[11].choice[2].checked = document.getElementById("120").checked
             }
         break;
         case "121":
             if (document.getElementById("121").checked == true){
                 document.getElementById("122").checked = false
+                file.QCM[12].choice[0].checked = document.getElementById("121").checked
+                file.QCM[12].choice[1].checked = document.getElementById("122").checked
             }
         break;
         case "122":
             if (document.getElementById("122").checked == true){
                 document.getElementById("121").checked = false
+                file.QCM[12].choice[0].checked = document.getElementById("121").checked
+                file.QCM[12].choice[1].checked = document.getElementById("122").checked
             }
         break;
         case "123":
             if (document.getElementById("123").checked == true){
                 document.getElementById("124").checked = false
+                file.QCM[14].choice[0].checked = document.getElementById("123").checked
+                file.QCM[14].choice[1].checked = document.getElementById("124").checked
             }
         break;
         case "124":
             if (document.getElementById("124").checked == true){
                 document.getElementById("123").checked = false
+                file.QCM[14].choice[0].checked = document.getElementById("123").checked
+                file.QCM[14].choice[1].checked = document.getElementById("124").checked
             }
         break;
         case "125":
             if (document.getElementById("125").checked == true){
                 document.getElementById("126").checked = false
+                file.QCM[15].choice[0].checked = document.getElementById("125").checked
+                file.QCM[15].choice[1].checked = document.getElementById("126").checked
             }
         break;
         case "126":
             if (document.getElementById("126").checked == true){
                 document.getElementById("125").checked = false
+                file.QCM[15].choice[0].checked = document.getElementById("125").checked
+                file.QCM[15].choice[1].checked = document.getElementById("126").checked
             }
         break;
         case "127":
             if (document.getElementById("127").checked == true){
                 document.getElementById("128").checked = false
                 document.getElementById("129").checked = false
+                file.QCM[16].choice[0].checked = document.getElementById("127").checked
+                file.QCM[16].choice[1].checked = document.getElementById("128").checked
+                file.QCM[16].choice[2].checked = document.getElementById("129").checked
             }
         break;
         case "128":
             if (document.getElementById("128").checked == true){
                 document.getElementById("127").checked = false
                 document.getElementById("129").checked = false
+                file.QCM[16].choice[0].checked = document.getElementById("127").checked
+                file.QCM[16].choice[1].checked = document.getElementById("128").checked
+                file.QCM[16].choice[2].checked = document.getElementById("129").checked
             }
         break;
         case "129":
             if (document.getElementById("129").checked == true){
                 document.getElementById("128").checked = false
                 document.getElementById("127").checked = false
+                file.QCM[16].choice[0].checked = document.getElementById("127").checked
+                file.QCM[16].choice[1].checked = document.getElementById("128").checked
+                file.QCM[16].choice[2].checked = document.getElementById("129").checked
             }
         break;
         case "130":
             if (document.getElementById("130").checked == true){
                 document.getElementById("132").checked = false
-                document.getElementById("132").checked = false
+                document.getElementById("131").checked = false
+                file.QCM[17].choice[0].checked = document.getElementById("130").checked
+                file.QCM[17].choice[1].checked = document.getElementById("131").checked
+                file.QCM[17].choice[2].checked = document.getElementById("132").checked
             }
         break;
         case "131":
             if (document.getElementById("131").checked == true){
                 document.getElementById("132").checked = false
                 document.getElementById("130").checked = false
+                file.QCM[17].choice[0].checked = document.getElementById("130").checked
+                file.QCM[17].choice[1].checked = document.getElementById("131").checked
+                file.QCM[17].choice[2].checked = document.getElementById("132").checked
             }
         break;
         case "132":
             if (document.getElementById("132").checked == true){
                 document.getElementById("131").checked = false
                 document.getElementById("130").checked = false
+                file.QCM[17].choice[0].checked = document.getElementById("130").checked
+                file.QCM[17].choice[1].checked = document.getElementById("131").checked
+                file.QCM[17].choice[2].checked = document.getElementById("132").checked
             }
         break;
         case "133":
             if (document.getElementById("133").checked == true){
                 document.getElementById("134").checked = false
+                file.QCM[20].choice[0].checked = document.getElementById("133").checked
+                file.QCM[20].choice[1].checked = document.getElementById("134").checked
             }
         break;
         case "134":
             if (document.getElementById("134").checked == true){
                 document.getElementById("133").checked = false
+                file.QCM[20].choice[0].checked = document.getElementById("133").checked
+                file.QCM[20].choice[1].checked = document.getElementById("134").checked
             }
         break;
         case "135":
             if (document.getElementById("135").checked == true){
                 document.getElementById("136").checked = false
+                file.QCM[21].choice[0].checked = document.getElementById("135").checked
+                file.QCM[21].choice[1].checked = document.getElementById("136").checked
             }
         break;
         case "136":
             if (document.getElementById("136").checked == true){
                 document.getElementById("135").checked = false
+                file.QCM[21].choice[0].checked = document.getElementById("135").checked
+                file.QCM[21].choice[1].checked = document.getElementById("136").checked
             }
         break;
         case "137":
             if (document.getElementById("137").checked == true){
                 document.getElementById("138").checked = false
+                file.QCM[22].choice[0].checked = document.getElementById("137").checked
+                file.QCM[22].choice[1].checked = document.getElementById("138").checked
             }
         break;
         case "138":
             if (document.getElementById("138").checked == true){
                 document.getElementById("137").checked = false
+                file.QCM[22].choice[0].checked = document.getElementById("137").checked
+                file.QCM[22].choice[1].checked = document.getElementById("138").checked
             }
         break;
         case "139":
             if (document.getElementById("139").checked == true){
                 document.getElementById("140").checked = false
+                file.QCM[24].choice[0].checked = document.getElementById("139").checked
+                file.QCM[24].choice[1].checked = document.getElementById("140").checked
             }
         break;
         case "140":
             if (document.getElementById("140").checked == true){
                 document.getElementById("139").checked = false
+                file.QCM[24].choice[0].checked = document.getElementById("139").checked
+                file.QCM[24].choice[1].checked = document.getElementById("140").checked
             }
         break;
         case "141":
             if (document.getElementById("141").checked == true){
                 document.getElementById("142").checked = false
                 document.getElementById("143").checked = false
+                file.QCM[25].choice[0].checked = document.getElementById("141").checked
+                file.QCM[25].choice[1].checked = document.getElementById("142").checked
+                file.QCM[25].choice[2].checked = document.getElementById("143").checked
             }
         break;
         case "142":
             if (document.getElementById("142").checked == true){
                 document.getElementById("141").checked = false
                 document.getElementById("143").checked = false
+                file.QCM[25].choice[0].checked = document.getElementById("141").checked
+                file.QCM[25].choice[1].checked = document.getElementById("142").checked
+                file.QCM[25].choice[2].checked = document.getElementById("143").checked
             }
         break;
         case "143":
             if (document.getElementById("143").checked == true){
                 document.getElementById("142").checked = false
                 document.getElementById("141").checked = false
+                file.QCM[25].choice[0].checked = document.getElementById("141").checked
+                file.QCM[25].choice[1].checked = document.getElementById("142").checked
+                file.QCM[25].choice[2].checked = document.getElementById("143").checked
             }
         break;
         case "144":
             if (document.getElementById("144").checked == true){
                 document.getElementById("145").checked = false
                 document.getElementById("146").checked = false
+                file.QCM[26].choice[0].checked = document.getElementById("144").checked
+                file.QCM[26].choice[1].checked = document.getElementById("145").checked
+                file.QCM[26].choice[2].checked = document.getElementById("146").checked
             }
         break;
         case "145":
             if (document.getElementById("145").checked == true){
                 document.getElementById("144").checked = false
                 document.getElementById("146").checked = false
+                file.QCM[26].choice[0].checked = document.getElementById("144").checked
+                file.QCM[26].choice[1].checked = document.getElementById("145").checked
+                file.QCM[26].choice[2].checked = document.getElementById("146").checked
             }
         break;
         case "146":
             if (document.getElementById("146").checked == true){
                 document.getElementById("145").checked = false
                 document.getElementById("144").checked = false
+                file.QCM[26].choice[0].checked = document.getElementById("144").checked
+                file.QCM[26].choice[1].checked = document.getElementById("145").checked
+                file.QCM[26].choice[2].checked = document.getElementById("146").checked
             }
         break;
         case "147":
             if (document.getElementById("147").checked == true){
                 document.getElementById("148").checked = false
+                file.QCM[27].choice[0].checked = document.getElementById("147").checked
+                file.QCM[27].choice[1].checked = document.getElementById("148").checked
             }
         break;
         case "148":
             if (document.getElementById("148").checked == true){
                 document.getElementById("147").checked = false
+                file.QCM[27].choice[0].checked = document.getElementById("147").checked
+                file.QCM[27].choice[1].checked = document.getElementById("148").checked
             }
         break;
         case "149":
@@ -580,6 +744,10 @@ function checkbox(e){
                 document.getElementById("150").checked = false
                 document.getElementById("151").checked = false
                 document.getElementById("152").checked = false
+                file.QCM[29].choice[0].checked = document.getElementById("149").checked
+                file.QCM[29].choice[1].checked = document.getElementById("150").checked
+                file.QCM[29].choice[2].checked = document.getElementById("151").checked
+                file.QCM[29].choice[3].checked = document.getElementById("152").checked
             }
         break;
         case "150":
@@ -587,6 +755,10 @@ function checkbox(e){
                 document.getElementById("149").checked = false
                 document.getElementById("151").checked = false
                 document.getElementById("152").checked = false
+                file.QCM[29].choice[0].checked = document.getElementById("149").checked
+                file.QCM[29].choice[1].checked = document.getElementById("150").checked
+                file.QCM[29].choice[2].checked = document.getElementById("151").checked
+                file.QCM[29].choice[3].checked = document.getElementById("152").checked
             }
         break;
         case "151":
@@ -594,6 +766,10 @@ function checkbox(e){
                 document.getElementById("149").checked = false
                 document.getElementById("150").checked = false
                 document.getElementById("152").checked = false
+                file.QCM[29].choice[0].checked = document.getElementById("149").checked
+                file.QCM[29].choice[1].checked = document.getElementById("150").checked
+                file.QCM[29].choice[2].checked = document.getElementById("151").checked
+                file.QCM[29].choice[3].checked = document.getElementById("152").checked
             }
         break;
         case "152":
@@ -601,6 +777,10 @@ function checkbox(e){
                 document.getElementById("149").checked = false
                 document.getElementById("151").checked = false
                 document.getElementById("150").checked = false
+                file.QCM[29].choice[0].checked = document.getElementById("149").checked
+                file.QCM[29].choice[1].checked = document.getElementById("150").checked
+                file.QCM[29].choice[2].checked = document.getElementById("151").checked
+                file.QCM[29].choice[3].checked = document.getElementById("152").checked
             }
         break;
         case "153":
@@ -608,6 +788,10 @@ function checkbox(e){
                 document.getElementById("154").checked = false
                 document.getElementById("155").checked = false
                 document.getElementById("156").checked = false
+                file.QCM[32].choice[0].checked = document.getElementById("153").checked
+                file.QCM[32].choice[1].checked = document.getElementById("154").checked
+                file.QCM[32].choice[2].checked = document.getElementById("155").checked
+                file.QCM[32].choice[3].checked = document.getElementById("156").checked
             }
         break;
         case "154":
@@ -615,6 +799,10 @@ function checkbox(e){
                 document.getElementById("153").checked = false
                 document.getElementById("155").checked = false
                 document.getElementById("156").checked = false
+                file.QCM[32].choice[0].checked = document.getElementById("153").checked
+                file.QCM[32].choice[1].checked = document.getElementById("154").checked
+                file.QCM[32].choice[2].checked = document.getElementById("155").checked
+                file.QCM[32].choice[3].checked = document.getElementById("156").checked
             }
         break;
         case "155":
@@ -622,6 +810,10 @@ function checkbox(e){
                 document.getElementById("154").checked = false
                 document.getElementById("153").checked = false
                 document.getElementById("156").checked = false
+                file.QCM[32].choice[0].checked = document.getElementById("153").checked
+                file.QCM[32].choice[1].checked = document.getElementById("154").checked
+                file.QCM[32].choice[2].checked = document.getElementById("155").checked
+                file.QCM[32].choice[3].checked = document.getElementById("156").checked
             }
         break;
         case "156":
@@ -629,194 +821,319 @@ function checkbox(e){
                 document.getElementById("154").checked = false
                 document.getElementById("155").checked = false
                 document.getElementById("153").checked = false
+                file.QCM[32].choice[0].checked = document.getElementById("153").checked
+                file.QCM[32].choice[1].checked = document.getElementById("154").checked
+                file.QCM[32].choice[2].checked = document.getElementById("155").checked
+                file.QCM[32].choice[3].checked = document.getElementById("156").checked
             }
         break;
         case "157":
             if (document.getElementById("157").checked == true){
                 document.getElementById("158").checked = false
                 document.getElementById("159").checked = false
+                file.QCM[34].choice[0].checked = document.getElementById("157").checked
+                file.QCM[34].choice[1].checked = document.getElementById("158").checked
+                file.QCM[34].choice[2].checked = document.getElementById("159").checked
             }
         break;
         case "158":
             if (document.getElementById("158").checked == true){
                 document.getElementById("157").checked = false
                 document.getElementById("159").checked = false
+                file.QCM[34].choice[0].checked = document.getElementById("157").checked
+                file.QCM[34].choice[1].checked = document.getElementById("158").checked
+                file.QCM[34].choice[2].checked = document.getElementById("159").checked
             }
         break;
         case "159":
             if (document.getElementById("159").checked == true){
                 document.getElementById("158").checked = false
                 document.getElementById("157").checked = false
+                file.QCM[34].choice[0].checked = document.getElementById("157").checked
+                file.QCM[34].choice[1].checked = document.getElementById("158").checked
+                file.QCM[34].choice[2].checked = document.getElementById("159").checked
             }
         break;
         case "160":
             if (document.getElementById("160").checked == true){
                 document.getElementById("161").checked = false
+                file.QCM[35].choice[0].checked = document.getElementById("160").checked
+                file.QCM[35].choice[1].checked = document.getElementById("161").checked
             }
         break;
         case "161":
             if (document.getElementById("161").checked == true){
                 document.getElementById("160").checked = false
+                file.QCM[35].choice[0].checked = document.getElementById("160").checked
+                file.QCM[35].choice[1].checked = document.getElementById("161").checked
             }
         break;
         case "162":
             if (document.getElementById("162").checked == true){
                 document.getElementById("163").checked = false
+                file.QCM[36].choice[0].checked = document.getElementById("162").checked
+                file.QCM[36].choice[1].checked = document.getElementById("163").checked
             }
         break;
         case "163":
             if (document.getElementById("163").checked == true){
                 document.getElementById("162").checked = false
+                file.QCM[36].choice[0].checked = document.getElementById("162").checked
+                file.QCM[36].choice[1].checked = document.getElementById("163").checked
             }
         break;
         case "164":
             if (document.getElementById("164").checked == true){
                 document.getElementById("165").checked = false
+                file.QCM[37].choice[0].checked = document.getElementById("164").checked
+                file.QCM[37].choice[1].checked = document.getElementById("165").checked
             }
         break;
         case "165":
             if (document.getElementById("165").checked == true){
                 document.getElementById("164").checked = false
+                file.QCM[37].choice[0].checked = document.getElementById("164").checked
+                file.QCM[37].choice[1].checked = document.getElementById("165").checked
             }
         break;
         case "166":
             if (document.getElementById("166").checked == true){
                 document.getElementById("167").checked = false
+                file.QCM[38].choice[0].checked = document.getElementById("166").checked
+                file.QCM[38].choice[1].checked = document.getElementById("167").checked
             }
         break;
         case "167":
             if (document.getElementById("167").checked == true){
                 document.getElementById("166").checked = false
+                file.QCM[38].choice[0].checked = document.getElementById("166").checked
+                file.QCM[38].choice[1].checked = document.getElementById("167").checked
             }
         break;
         case "168":
             if (document.getElementById("168").checked == true){
                 document.getElementById("169").checked = false
+                file.QCM[39].choice[0].checked = document.getElementById("168").checked
+                file.QCM[39].choice[1].checked = document.getElementById("169").checked
             }
         break;
         case "169":
             if (document.getElementById("169").checked == true){
                 document.getElementById("168").checked = false
+                file.QCM[39].choice[0].checked = document.getElementById("168").checked
+                file.QCM[39].choice[1].checked = document.getElementById("169").checked
             }
         break;
         case "170":
             if (document.getElementById("170").checked == true){
                 document.getElementById("171").checked = false
                 document.getElementById("172").checked = false
+                file.QCM[43].choice[0].checked = document.getElementById("170").checked
+                file.QCM[43].choice[1].checked = document.getElementById("171").checked
+                file.QCM[43].choice[2].checked = document.getElementById("172").checked
             }
         break;
         case "171":
             if (document.getElementById("171").checked == true){
                 document.getElementById("170").checked = false
                 document.getElementById("172").checked = false
+                file.QCM[43].choice[0].checked = document.getElementById("170").checked
+                file.QCM[43].choice[1].checked = document.getElementById("171").checked
+                file.QCM[43].choice[2].checked = document.getElementById("172").checked
             }
         break;
         case "172":
             if (document.getElementById("172").checked == true){
                 document.getElementById("171").checked = false
                 document.getElementById("170").checked = false
+                file.QCM[43].choice[0].checked = document.getElementById("170").checked
+                file.QCM[43].choice[1].checked = document.getElementById("171").checked
+                file.QCM[43].choice[2].checked = document.getElementById("172").checked
             }
         break;
         case "173":
             if (document.getElementById("173").checked == true){
                 document.getElementById("174").checked = false
+                file.QCM[46].choice[0].checked = document.getElementById("173").checked
+                file.QCM[46].choice[1].checked = document.getElementById("174").checked
             }
         break;
         case "174":
             if (document.getElementById("174").checked == true){
                 document.getElementById("173").checked = false
+                file.QCM[46].choice[0].checked = document.getElementById("173").checked
+                file.QCM[46].choice[1].checked = document.getElementById("174").checked
             }
         break;
         case "175":
             if (document.getElementById("175").checked == true){
                 document.getElementById("176").checked = false
+                file.QCM[53].choice[0].checked = document.getElementById("175").checked
+                file.QCM[53].choice[1].checked = document.getElementById("176").checked
             }
         break;
         case "176":
             if (document.getElementById("176").checked == true){
                 document.getElementById("175").checked = false
+                file.QCM[53].choice[0].checked = document.getElementById("175").checked
+                file.QCM[53].choice[1].checked = document.getElementById("176").checked
             }
         break;
         case "177":
             if (document.getElementById("177").checked == true){
                 document.getElementById("178").checked = false
+                file.QCM[54].choice[0].checked = document.getElementById("177").checked
+                file.QCM[54].choice[1].checked = document.getElementById("178").checked
             }
         break;
         case "178":
             if (document.getElementById("178").checked == true){
                 document.getElementById("177").checked = false
+                file.QCM[54].choice[0].checked = document.getElementById("177").checked
+                file.QCM[54].choice[1].checked = document.getElementById("178").checked
             }
         break;
         case "179":
             if (document.getElementById("179").checked == true){
                 document.getElementById("180").checked = false
+                file.QCM[56].choice[0].checked = document.getElementById("179").checked
+                file.QCM[56].choice[1].checked = document.getElementById("180").checked
             }
         break;
         case "180":
             if (document.getElementById("180").checked == true){
                 document.getElementById("179").checked = false
+                file.QCM[56].choice[0].checked = document.getElementById("179").checked
+                file.QCM[56].choice[1].checked = document.getElementById("180").checked
             }
         break;
         case "181":
             if (document.getElementById("181").checked == true){
                 document.getElementById("182").checked = false
+                file.QCM[57].choice[0].checked = document.getElementById("181").checked
+                file.QCM[57].choice[1].checked = document.getElementById("182").checked
             }
         break;
         case "182":
             if (document.getElementById("182").checked == true){
                 document.getElementById("181").checked = false
+                file.QCM[57].choice[0].checked = document.getElementById("181").checked
+                file.QCM[57].choice[1].checked = document.getElementById("182").checked
             }
         break;
         case "183":
             if (document.getElementById("183").checked == true){
                 document.getElementById("184").checked = false
+                file.QCM[58].choice[0].checked = document.getElementById("181").checked
+                file.QCM[58].choice[1].checked = document.getElementById("182").checked
             }
         break;
         case "184":
             if (document.getElementById("184").checked == true){
                 document.getElementById("183").checked = false
+                file.QCM[58].choice[0].checked = document.getElementById("181").checked
+                file.QCM[58].choice[1].checked = document.getElementById("182").checked
             }
+        break;
+        case "1001":
+        case "1002":
+        case "1003":
+            file.QCM[6].choice[0].checked = document.getElementById("1001").checked
+            file.QCM[6].choice[1].checked = document.getElementById("1002").checked
+            file.QCM[6].choice[2].checked = document.getElementById("1003").checked
+        break;
+        case "1004":
+        case "1005":
+        case "1006":
+        case "1007":
+        case "1008":
+            file.QCM[13].choice[0].checked = document.getElementById("1004").checked
+            file.QCM[13].choice[1].checked = document.getElementById("1005").checked
+            file.QCM[13].choice[2].checked = document.getElementById("1006").checked
+            file.QCM[13].choice[3].checked = document.getElementById("1007").checked
+            file.QCM[13].choice[4].checked = document.getElementById("1008").checked
+        break;
+        case "1009":
+        case "1010":
+        case "1011":
+        case "1012":
+            file.QCM[18].choice[0].checked = document.getElementById("1009").checked
+            file.QCM[18].choice[1].checked = document.getElementById("1010").checked
+            file.QCM[18].choice[2].checked = document.getElementById("1011").checked
+            file.QCM[18].choice[3].checked = document.getElementById("1012").checked
+        break;
+        case "1013":
+        case "1014":
+        case "1015":
+            file.QCM[19].choice[0].checked = document.getElementById("1013").checked
+            file.QCM[19].choice[1].checked = document.getElementById("1014").checked
+            file.QCM[19].choice[2].checked = document.getElementById("1015").checked
+        break;
+        case "1016":
+        case "1017":
+            file.QCM[23].choice[0].checked = document.getElementById("1016").checked
+            file.QCM[23].choice[1].checked = document.getElementById("1017").checked
+        break;
+        case "1018":
+        case "1019":
+        case "1020":
+        case "1021":
+            file.QCM[28].choice[0].checked = document.getElementById("1018").checked
+            file.QCM[28].choice[1].checked = document.getElementById("1019").checked
+            file.QCM[28].choice[2].checked = document.getElementById("1020").checked
+            file.QCM[28].choice[3].checked = document.getElementById("1021").checked
+        break;
+        case "1022":
+        case "1023":
+        case "1024":
+            file.QCM[33].choice[0].checked = document.getElementById("1022").checked
+            file.QCM[33].choice[1].checked = document.getElementById("1023").checked
+            file.QCM[33].choice[2].checked = document.getElementById("1024").checked
+        break;
+        case "1025":
+        case "1026":
+        case "1027":
+        case "1028":
+        case "1029":
+            file.QCM[50].choice[0].checked = document.getElementById("1025").checked
+            file.QCM[50].choice[1].checked = document.getElementById("1026").checked
+            file.QCM[50].choice[2].checked = document.getElementById("1027").checked
+            file.QCM[50].choice[3].checked = document.getElementById("1028").checked
+            file.QCM[50].choice[4].checked = document.getElementById("1029").checked
+        break;
+        case "1030":
+        case "1031":
+        case "1032":
+        case "1033":
+        case "1034":
+            file.QCM[51].choice[0].checked = document.getElementById("1030").checked
+            file.QCM[51].choice[1].checked = document.getElementById("1031").checked
+            file.QCM[51].choice[2].checked = document.getElementById("1032").checked
+            file.QCM[51].choice[3].checked = document.getElementById("1033").checked
+            file.QCM[51].choice[4].checked = document.getElementById("1034").checked
+        break;
+        case "1035":
+        case "1036":
+        case "1037":
+        case "1038":
+        case "1039":
+            file.QCM[52].choice[0].checked = document.getElementById("1035").checked
+            file.QCM[52].choice[1].checked = document.getElementById("1036").checked
+            file.QCM[52].choice[2].checked = document.getElementById("1037").checked
+            file.QCM[52].choice[3].checked = document.getElementById("1038").checked
+            file.QCM[52].choice[4].checked = document.getElementById("1039").checked
         break;
     }
 }
 
-const liste = document.querySelectorAll('.group-question');
-
-setTimeout(console.log(liste), 500)
-
 
 
 function generer(){
-   
-
     const urlFile = window.URL.createObjectURL(new Blob([JSON.stringify(file)], {type: "application/json"}))
     const getName = window.sessionStorage.getItem("name");
     const getLastName = window.sessionStorage.getItem("lastName")
-    const element = document.getElementById('print');
-
-    
-
     const a = document.createElement('a')
     a.href= (urlFile)
     a.download = `${getName+'_'+getLastName+'_qcm.json'}`
     a.click()
-    
-    // if(screen.width < 1024) {
-    //     document.getElementById("viewport").setAttribute("content", "width=1200px");
-    // }
-    // const opt = {
-    //     margin:       0,
-    //     filename:     `${getName+'_'+getLastName+'_qcm.pdf'}`,
-    //     image:        { type: 'jpeg', quality: 9 },
-    //     html2canvas:  {
-    //         scale: 0.8
-    //     },
-    //     jsPDF:        { unit: 'in', format: 'a4', orientation: 'portrait' }
-    // };
-
-    // html2pdf().set(opt).from(element).save();
-
-    // if(screen.width < 1024) {
-    //     document.getElementById("viewport").setAttribute("content", "width=device-width, initial-scale=1");
-    // }
 }
