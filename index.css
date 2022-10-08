@@ -15,7 +15,7 @@ h2{
 h3{
     font-size: 1.5rem;
     font-family: 'Dancing Script', cursive;
-    color: cornflowerblue;
+    color: white;
     margin: 0;
 }
 h4{
@@ -160,11 +160,9 @@ textarea{
     border-radius: 15px;
     height: auto;
     margin:20px 0;
-    background: linear-gradient(0deg, rgb(92 137 179) 0%, rgb(255 255 255) 100%);
+    background: #95bcdd;
 
 }
-
-
 .small-input_gestion{
     display: flex;
     width: 100%;
@@ -173,7 +171,7 @@ textarea{
     margin-bottom: 20px;
 }
 .small-input{
-    width: 150px;
+    width: 180px;
     flex-wrap: wrap;
     height: 30px;
     /* box-shadow: rgb(50 50 93 / 25%) 0px 50px 100px -20px, rgb(0 0 0 / 30%) 0px 30px 60px -30px, rgb(10 37 64 / 35%) 0px -2px 6px 0px inset; */
@@ -207,6 +205,36 @@ input::-o-inner-spin-button,
 input::-o-outer-spin-button { 
     -o-appearance: none;
 	margin:0
+}
+input[type=checkbox] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+}
+input[type=checkbox] {
+    -border-radius: 4px;
+    height: 20px;
+    width: 20px;
+    background: #fff;
+    border: dashed 1px black;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+input[type="checkbox"]:checked {
+    background: steelblue;
+    color: white;
+    margin:auto;
+    position: relative;
+    border:none;
+}
+input[type="checkbox"]:before {
+  font-family: FontAwesome;
+  content: '\f00c';
+  display: block;
+  color: white;
+  font-size: 18px;
+  position: absolute;
 }
 .middle-input{
     display: flex;
@@ -265,7 +293,7 @@ input::-o-outer-spin-button {
     background: cornflowerblue;
     border: solid 3px cornflowerblue;
     flex-direction: column;
-    align-items: center;
+    align-items: start;
     position: fixed;
     overflow: hidden;
     margin: 0;
@@ -277,7 +305,7 @@ input::-o-outer-spin-button {
     top: 0%;
     left: 0;
     cursor: pointer;
-    transition: width 0.4s ease-in-out, height 0.4s ease-in-out, border-radius 1s ease-in-out;
+    transition: width 0.7s ease-in-out, height 0.7s ease-in-out, border-radius 1s ease-in-out,  align-items 1s ease-in-out;
 }
 .menu.menuclose{
     display: flex;
@@ -285,20 +313,21 @@ input::-o-outer-spin-button {
     width: 60px;
     border-radius: 0px 0% 1em 0%;
     border: solid 3px cornflowerblue;
+    align-items: start;
 }
 .menu.menuopen{
     height: 250px;
     width: 350px;
     border-radius: 0px 0% 5em 0%;
-    justify-content: space-between;
+    align-items: end;
     border: solid 3px cornflowerblue;
+    align-items: end;
 }
 .fa-bars, .fa-xmark{
     font-size: 1.9rem;
     height: 50px;
-    width: 95%;
+    width: fit-content;
     color:#fff;
-    text-align: center;
     margin: 10px
 }
 .fa-xmark{
@@ -311,6 +340,7 @@ input::-o-outer-spin-button {
     align-items: center;
     width: 100%;
     height: 50px;
+    min-height: 50px;
     overflow: hidden;
     text-overflow: ellipsis;
     cursor: pointer;
@@ -323,5 +353,53 @@ input::-o-outer-spin-button {
     }
     to{
         transform:rotate(360deg);
+    }
+}
+@media only screen and (max-width: 1024px) {
+    .menu.menuopen{
+        width: 100%;
+        border-radius: 0px;
+        height: 340px;
+    }
+    .container-qcm{
+        width: 80%;
+    }
+    .btn{
+        margin: 40px 0;
+    }
+    .small-input{
+        margin: 10px 0;
+    }
+}
+@media only screen and (max-width: 650px) {
+    .menu.menuopen{
+        width: 100%;
+        border-radius: 0px;
+        height: 100%;
+    }
+    .container-qcm{
+        width: 80%;
+    }
+    .btn{
+        margin: 40px 0;
+    }
+    .title{
+        font-size: 1.8rem;
+        margin-top: 60px;
+    }
+    .text_presentation{
+        font-size: 1rem;
+    }
+    h3{
+        font-size: 1.2rem;
+    }
+    h4{
+        font-size: 1rem;
+    }
+    .string-choice{
+        font-size: 1rem;
+    }
+    .container-qcm{
+        width: 100%;
     }
 }
