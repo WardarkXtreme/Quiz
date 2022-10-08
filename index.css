@@ -402,4 +402,18 @@ input[type="checkbox"]:before {
     .container-qcm{
         width: 100%;
     }
+    .title_form_1{
+        font-size: 2rem;
+    }
+    .title_form_2{
+        font-size: 1.2rem;
+        text-align: center;
+    }
+    .title_form_3{
+        font-size: 2.1rem;
+        text-align: center;
+    }
+    #name, #lastname, #school, #mail{
+        font-size:1.2rem
+    }
 }
