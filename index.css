@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=EB+Garamond:ital@1&display=swap');
 body{
     overflow-y: hidden;
     width: 100%;
@@ -11,12 +12,14 @@ h2{
     color: cornflowerblue;
 }
 h3{
-    font-size: 1.4rem;
+    font-size: 1.5rem;
+    font-family: 'Dancing Script', cursive;
     color: cornflowerblue;
     margin: 0;
 }
 h4{
-    font-size: 1.2rem;
+    font-size: 1.4rem;
+    font-family: 'EB Garamond', serif;
     margin-top: 0;
 }
 textarea{
@@ -39,7 +42,6 @@ textarea{
     flex-direction: column;
     align-items: center;
     width: 100%;
-    max-width: 500px;
     height: auto;
     background: rgba(255, 255, 255, 0.24);
     border-radius: 16px;
@@ -99,7 +101,6 @@ textarea{
 }
 .container-qcm{
     display: flex;
-    width: 800px;
     min-width: 0px;
     flex-direction: column;
 }
@@ -111,16 +112,23 @@ textarea{
 }
 .title{
     font-size: 3rem;
+    font-family: 'Dancing Script', cursive;
     color: cornflowerblue;
     margin-bottom: 0;
 }
 .text_presentation{
     display: flex;
     width: 90%;
+    font-size: 1.2rem;
     max-width: 900px;
     text-align: justify;
     border: black solid 1px;
+    border-radius: 1em;
     padding: 15px;
+}
+.identification{
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.4rem;
 }
 .group-id{
     text-align: left;
@@ -154,7 +162,7 @@ textarea{
     display: flex;
     width: 100%;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     margin-bottom: 20px;
 }
 .small-input{
@@ -217,11 +225,14 @@ input::-o-outer-spin-button {
     display: flex;
     padding: 0px 15px;
     border-radius: 15px;
-    background: lavender;
+    background: #bee3ae;
     width: fit-content;
     margin-bottom: 15px;
     justify-content: space-between;
     align-items: center;
+}
+.string-choice{
+    font-size: 1.3rem;
 }
 .checkbox{
     display: flex;
@@ -234,32 +245,76 @@ input::-o-outer-spin-button {
     text-align: center;
     margin: 40px 0;
 }
-.center-btn{
-    display: flex;
-    height: auto;
-    width: 100%;
-    justify-content: center;
-}
-.btn-save{
-    display: flex;
-    width: 170px;
-    height: 50px;
-    border-radius: 2em;
-    background: burlywood;
-    border: none;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 70px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.61);
-    font-weight: 800;
-    font-size:1.4rem;
-    cursor: pointer;
-}
-.btn-save:hover{
+.btn:hover{
     transform: scale(1.1);
     transition: transform 0.2s ease-in-out;
-    cursor: pointer;
 }
-.btn-save:active{
+.btn:active{
     transform: scale(0.7);
+}
+
+.menu{ 
+    display: flex;
+    background: cornflowerblue;
+    border: solid 3px cornflowerblue;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    border: none;
+    border-radius: 0px 0% 1em 0%;
+    height: 50px;
+    width: 60px;
+    top: 0%;
+    left: 0;
+    cursor: pointer;
+    transition: width 0.4s ease-in-out, height 0.4s ease-in-out, border-radius 1s ease-in-out;
+}
+.menu.menuclose{
+    display: flex;
+    height: 50px;
+    width: 60px;
+    border-radius: 0px 0% 1em 0%;
+    border: solid 3px cornflowerblue;
+}
+.menu.menuopen{
+    height: 250px;
+    width: 350px;
+    border-radius: 0px 0% 5em 0%;
+    justify-content: space-between;
+    border: solid 3px cornflowerblue;
+}
+.fa-bars, .fa-xmark{
+    font-size: 1.9rem;
+    height: 50px;
+    width: 95%;
+    color:#fff;
+    text-align: center;
+    margin: 10px
+}
+.fa-xmark{
+    font-size: 2.2rem;
+}
+.btn{
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-family: 'EB Garamond', serif;
+}
+@keyframes turn {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform:rotate(360deg);
+    }
 }

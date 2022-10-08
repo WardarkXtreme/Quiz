@@ -6,16 +6,16 @@
             "QuestionName" : "Citez les 4 paramètres (principes du nettoyage) qui composent le Cercle de Sinner :",
             "smallInput" : [
                 {
-                    "0" : "0"
+                    "input" : ""
                 },
                 {
-                    "1" : "1"
+                    "input" : ""
                 },
                 {
-                    "2" : "2"
+                    "input" : ""
                 },
                 {
-                    "3" : "3"
+                    "input" : ""
                 }
             ]
         },
@@ -25,7 +25,7 @@
             "QuestionName" : "Pourquoi ne faut-il pas nettoyer aux ultrasons des instruments comportant une partie en caoutchouc ou en silicone ?",
             "bigInput" : [
                 {
-                    "0" : "0"
+                    "input" : ""
                 }
             ] 
         },
@@ -36,11 +36,11 @@
             "choice" : [
                 {
                     "choice" : "Stériliser les instruments",
-                    "checked" : "false"
+                    "checked" : false
                 },
                 {
                     "choice" : "Garantir l’état stérile des instruments dans le temps",
-                    "checked" : "false"
+                    "checked" : false
                 }
             ] 
         },
@@ -51,19 +51,19 @@
             "choice" : [
                 {
                     "choice" : "Lavage",
-                    "checked" : "false"
+                    "checked" : false
                 },
                 {
                     "choice" : "Neutralisation",
-                    "checked" : "false"
+                    "checked" : false
                 },
                 {
                     "choice" : "Désinfection",
-                    "checked" : "false"
+                    "checked" : false
                 },
                 {
                     "choice" : "Rinçage intermédiaire",
-                    "checked" : "false"
+                    "checked" : false
                 }
             ] 
         },
@@ -74,11 +74,11 @@
             "choice" : [
                 {
                     "choice" : "D’ébullition permettant une désinfection",
-                    "checked" : "false"
+                    "checked" : false
                 },
                 {
                     "choice" : "Mécanique facilitant un nettoyage ultérieur (procédé d'appoint)",
-                    "checked" : "false"
+                    "checked" : false
                 }
             ] 
         },
@@ -89,19 +89,19 @@
             "choice" : [
                 {
                     "choice" : "Non",
-                    "checked" : "false"
+                    "checked" : false
                 },
                 {
                     "choice" : "Oui utilisation unique d’eau osmosée",
-                    "checked" : "false"
+                    "checked" : false
                 },
                 {
                     "choice" : "Oui utilisation unique d'eau adoucie",
-                    "checked" : "false"
+                    "checked" : false
                 },
                 {
                     "choice" : "Oui utilisation d'eau adoucie et d'eau osmosée",
-                    "checked" : "false"
+                    "checked" : false
                 }
             ] 
         },
@@ -112,15 +112,15 @@
             "choice" : [
                 {
                     "choice" : "Prise en charge standard (1 cycle de LDI)",
-                    "checked" : "false"
+                    "checked" : false
                 },
                 {
                     "choice" : "Effectuer une pré-désinfection avant de les mettre dans le LDI",
-                    "checked" : "false"
+                    "checked" : false
                 },
                 {
                     "choice" : "Effectuer au moins 2 phases de lavage (ne pas confondre 1 cycle et 1 phase)",
-                    "checked" : "false"
+                    "checked" : false
                 }
             ] 
         },
@@ -131,17 +131,17 @@
             "choice" : [
                 {
                     "choice" : "Non",
-                    "checked" : "false"
+                    "checked" : false
                 },
                 {
                     "choice" : "Oui",
-                    "checked" : "false"
+                    "checked" : false
                 }
             ],
             "titleInput" : "Justifiez votre réponse :",
             "middleInput" : [
                 {
-                    "0" : "0"
+                    "input" : ""
                 }
             ] 
         },
@@ -182,7 +182,7 @@
             "QuestionName" : "Citez trois objectifs principaux de la pré-désinfection. « réponse libre »",
             "middleInput" : [
                 {
-                    "0" : "0"
+                    "input" : ""
                 }
             ] 
         },
@@ -193,21 +193,21 @@
             "choice" : [
                 {
                     "choice" : "Vrai",
-                    "checked" : "false"
+                    "checked" : false
                 },
                 {
                     "choice" : "Faux",
-                    "checked" : "false"
+                    "checked" : false
                 },
                 {
                     "choice": "Aucune importance",
-                    "checked" : "false"
+                    "checked" : false
                 }
             ],
             "titleInput" : "Justifiez votre réponse :",
             "middleInput" : [
                 {
-                    "0" : "0"
+                    "input" : ""
                 }
             ] 
         },
@@ -218,15 +218,15 @@
             "choice" : [
                 {
                     "choice" : "Tirer",
-                    "checked" : "false"
+                    "checked" : false
                 },
                 {
                     "choice" : "Pousser",
-                    "checked" : "false"
+                    "checked" : false
                 },
                 {
                     "choice": "Aucune importance",
-                    "checked" : "false"
+                    "checked" : false
                 }
             ]
         },
@@ -237,11 +237,11 @@
             "choice" : [
                 {
                     "choice" : "Immersion dans une solution DD",
-                    "checked" : "false"
+                    "checked" : false
                 },
                 {
                     "choice" : "Pas d’immersion dans une solution DD",
-                    "checked" : "false"
+                    "checked" : false
                 }
             ]
         },
@@ -252,23 +252,23 @@
             "choice" : [
                 {
                     "choice" : "Gants",
-                    "checked" : "false"
+                    "checked" : false
                 },
                 {
                     "choice" : "Sabots spécifiques",
-                    "checked" : "false"
+                    "checked" : false
                 },
                 {
                     "choice" : "Tablier usage unique",
-                    "checked" : "false"
+                    "checked" : false
                 },
                 {
                     "choice" : "Charlotte",
-                    "checked" : "false"
+                    "checked" : false
                 },
                 {
                     "choice" : "Lunettes de protection",
-                    "checked" : "false"
+                    "checked" : false
                 }
             ] 
         },
@@ -279,17 +279,17 @@
             "choice" : [
                 {
                     "choice" : "Vrai",
-                    "checked" : "false"
+                    "checked" : false
                 },
                 {
                     "choice" : "Faux",
-                    "checked" : "false"
+                    "checked" : false
                 }
             ],
             "titleInput" : "Précisez la méthode  :",
             "middleInput" : [
                 {
-                    "0" : "0"
+                    "input" : ""
                 }
             ] 
         },
@@ -300,17 +300,17 @@
             "choice" : [
                 {
                     "choice" : "Vrai",
-                    "checked" : "false"
+                    "checked" : false
                 },
                 {
                     "choice" : "Faux",
-                    "checked" : "false"
+                    "checked" : false
                 }
             ],
             "titleInput" : "Justifiez votre réponse :",
             "middleInput" : [
                 {
-                    "0" : "0"
+                    "input" : ""
                 }
             ] 
         },
@@ -321,15 +321,15 @@
             "choice" : [
                 {
                     "choice" : "Vrai",
-                    "checked" : "false"
+                    "checked" : false
                 },
                 {
                     "choice" : "Faux",
-                    "checked" : "false"
+                    "checked" : false
                 },
                 {
                     "choice" : "Dans certains cas",
-                    "checked" : "false"
+                    "checked" : false
                 }
             ]
         },
@@ -340,15 +340,15 @@
             "choice" : [
                 {
                     "choice" : "Oui, c’est une obligation",
-                    "checked" : "false"
+                    "checked" : false
                 },
                 {
                     "choice" : "Oui, c’est une recommandation",
-                    "checked" : "false"
+                    "checked" : false
                 },
                 {
                     "choice" : "Non",
-                    "checked" : "false"
+                    "checked" : false
                 }
             ]
         },
@@ -359,19 +359,19 @@
             "choice" : [
                 {
                     "choice" : "Repose sur un procédé chimique",
-                    "checked" : "false"
+                    "checked" : false
                 },
                 {
                     "choice" : "Repose sur une action mécanique",
-                    "checked" : "false"
+                    "checked" : false
                 },
                 {
                     "choice" : "Les instruments creux doivent impérativement être irrigués",
-                    "checked" : "false"
+                    "checked" : false
                 },
                 {
                     "choice" : "L’efficacité des produits chimiques dépend de la température (de l’eau)",
-                    "checked" : "false"
+                    "checked" : false
                 }
             ] 
         },
@@ -382,15 +382,15 @@
             "choice" : [
                 {
                     "choice" : "aucun",
-                    "checked" : "false"
+                    "checked" : false
                 },
                 {
                     "choice" : "test bleu de méthylène (ou équivalent)",
-                    "checked" : "false"
+                    "checked" : false
                 },
                 {
                     "choice" : "Seal check",
-                    "checked" : "false"
+                    "checked" : false
                 }
             ] 
         },
@@ -401,11 +401,11 @@
             "choice" : [
                 {
                     "choice" : "Avant passage à l’autoclave",
-                    "checked" : "false"
+                    "checked" : false
                 },
                 {
                     "choice" : "Après passage à l’autoclave",
-                    "checked" : "false"
+                    "checked" : false
                 }
             ]
         },
@@ -416,11 +416,11 @@
             "choice" : [
                 {
                     "choice" : "L’habilitation conducteur d’autoclave",
-                    "checked" : "false"
+                    "checked" : false
                 },
                 {
                     "choice" : "L’habilitation du chef de service (pharmacien)",
-                    "checked" : "false"
+                    "checked" : false
                 }
             ]
         },
@@ -431,11 +431,11 @@
             "choice" : [
                 {
                     "choice" : "> 20° C",
-                    "checked" : "false"
+                    "checked" : false
                 },
                 {
                     "choice" : "> 40° C",
-                    "checked" : "false"
+                    "checked" : false
                 }
             ]
         },
@@ -446,11 +446,11 @@
             "choice" : [
                 {
                     "choice" : "instruments HS (optiques et moteurs)",
-                    "checked" : "false"
+                    "checked" : false
                 },
                 {
                     "choice" : "Sur-condensation",
-                    "checked" : "false"
+                    "checked" : false
                 }
             ]
         },
@@ -461,11 +461,11 @@
             "choice" : [
                 {
                     "choice" : "Permettre à la vapeur de pénétrer plus facilement dans les systèmes d’emballages",
-                    "checked" : "false"
+                    "checked" : false
                 },
                 {
                     "choice" : "Produire la vapeur saturée à 134°C",
-                    "checked" : "false"
+                    "checked" : false
                 }
             ]
         },
@@ -476,15 +476,15 @@
             "choice" : [
                 {
                     "choice" : "Une réduction de 1 000 microorganismes",
-                    "checked" : "false"
+                    "checked" : false
                 },
                 {
                     "choice" : "Une réduction de 100 000 microorganismes",
-                    "checked" : "false"
+                    "checked" : false
                 },
                 {
                     "choice" : "Une réduction de 1 000 000 microorganismes",
-                    "checked" : "false"
+                    "checked" : false
                 }
             ]
         },
@@ -495,15 +495,15 @@
             "choice" : [
                 {
                     "choice" : "Les fournisseurs de système emballage",
-                    "checked" : "false"
+                    "checked" : false
                 },
                 {
                     "choice" : "Le pharmacien, chef de service de stérilisation",
-                    "checked" : "false"
+                    "checked" : false
                 },
                 {
                     "choice" : "Un logiciel de stérilisation",
-                    "checked" : "false"
+                    "checked" : false
                 }
             ]
         },
@@ -514,11 +514,11 @@
             "choice" : [
                 {
                     "choice" : "un emballage de protection",
-                    "checked" : "false"
+                    "checked" : false
                 },
                 {
                     "choice" : "un système de barrière stérile",
-                    "checked" : "false"
+                    "checked" : false
                 }
             ]
         },
@@ -529,19 +529,19 @@
             "choice" : [
                 {
                     "choice" : "La qualité de la vapeur d’eau",
-                    "checked" : "false"
+                    "checked" : false
                 },
                 {
                     "choice" : "La correspondance entre la durée et la température pour obtenir de la vapeur d'eau saturée",
-                    "checked" : "false"
+                    "checked" : false
                 },
                 {
                     "choice" : "La correspondance entre température et pression pour obtenir de la vapeur d'eau saturée",
-                    "checked" : "false"
+                    "checked" : false
                 },
                 {
                     "choice" : "La correspondance entre la durée et la pression pour obtenir de la vapeur d'eau saturée",
-                    "checked" : "false"
+                    "checked" : false
                 }
             ] 
         },
@@ -552,19 +552,19 @@
             "choice" : [
                 {
                     "choice" : "Une bactérie",
-                    "checked" : "false"
+                    "checked" : false
                 },
                 {
                     "choice" : "Un virus",
-                    "checked" : "false"
+                    "checked" : false
                 },
                 {
                     "choice" : "Une protéine",
-                    "checked" : "false"
+                    "checked" : false
                 },
                 {
                     "choice" : "Un champignon",
-                    "checked" : "false"
+                    "checked" : false
                 }
             ] 
         },
@@ -574,7 +574,7 @@
             "QuestionName" : "Que signifie le terme Z.A.C ?",
             "bigInput" : [
                 {
-                    "0" : "0"
+                    "input" : ""
                 }
             ] 
         },
@@ -584,7 +584,7 @@
             "QuestionName" : "Décrivez la notion de pelabilité sur une gaine ?",
             "bigInput" : [
                 {
-                    "0" : "0"
+                    "input" : ""
                 }
             ] 
         },
@@ -595,19 +595,19 @@
             "choice" : [
                 {
                     "choice" : "Sec",
-                    "checked" : "false"
+                    "checked" : false
                 },
                 {
                     "choice" : "Siccité",
-                    "checked" : "false"
+                    "checked" : false
                 },
                 {
                     "choice" : "Condensation",
-                    "checked" : "false"
+                    "checked" : false
                 },
                 {
                     "choice" : "Liquéfaction",
-                    "checked" : "false"
+                    "checked" : false
                 }
             ] 
         },
@@ -618,15 +618,15 @@
             "choice" : [
                 {
                     "choice" : "Hygrométrie",
-                    "checked" : "false"
+                    "checked" : false
                 },
                 {
                     "choice" : "Température",
-                    "checked" : "false"
+                    "checked" : false
                 },
                 {
                     "choice" : "Pression",
-                    "checked" : "false"
+                    "checked" : false
                 }
             ] 
         },
@@ -637,15 +637,15 @@
             "choice" : [
                 {
                     "choice" : "Test d’étanchéité",
-                    "checked" : "false"
+                    "checked" : false
                 },
                 {
                     "choice" : "Test de vide",
-                    "checked" : "false"
+                    "checked" : false
                 },
                 {
                     "choice" : "Test de pénétration de vapeur",
-                    "checked" : "false"
+                    "checked" : false
                 }
             ] 
         },
@@ -656,11 +656,11 @@
             "choice" : [
                 {
                     "choice" : "Oui",
-                    "checked" : "false"
+                    "checked" : false
                 },
                 {
                     "choice" : "Non",
-                    "checked" : "false"
+                    "checked" : false
                 }
             ] 
         },
@@ -671,17 +671,17 @@
             "choice" : [
                 {
                     "choice" : "Vrai",
-                    "checked" : "false"
+                    "checked" : false
                 },
                 {
                     "choice" : "Faux",
-                    "checked" : "false"
+                    "checked" : false
                 }
             ],
             "titleInput" : "Justifiez votre réponse :",
             "middleInput" : [
                 {
-                    "0" : "0"
+                    "input" : ""
                 }
             ] 
         },
@@ -692,17 +692,17 @@
             "choice" : [
                 {
                     "choice" : "Oui",
-                    "checked" : "false"
+                    "checked" : false
                 },
                 {
                     "choice" : "Non",
-                    "checked" : "false"
+                    "checked" : false
                 }
             ],
             "titleInput" : "Justifiez votre réponse :",
             "middleInput" : [
                 {
-                    "0" : "0"
+                    "input" : ""
                 }
             ] 
         },
@@ -713,11 +713,11 @@
             "choice" : [
                 {
                     "choice" : "Oui",
-                    "checked" : "false"
+                    "checked" : false
                 },
                 {
                     "choice" : "Non",
-                    "checked" : "false"
+                    "checked" : false
                 }
             ] 
         },
@@ -728,11 +728,11 @@
             "choice" : [
                 {
                     "choice" : "Sécher une Unité Stérile non conforme sur la Siccité",
-                    "checked" : "false"
+                    "checked" : false
                 },
                 {
                     "choice" : "Sécher un instrument qui est encore humide sortant du LDI",
-                    "checked" : "false"
+                    "checked" : false
                 }
             ] 
         },
@@ -765,7 +765,7 @@
             "QuestionName" : "Combien de zones doit-on avoir dans un service de stérilisation au minimum ?",
             "bigInput" : [
                 {
-                    "0" : "0"
+                    "input" : ""
                 }
             ] 
         },
@@ -775,7 +775,7 @@
             "QuestionName" : "La vapeur d'eau saturée est une méthode pour lutter contre l'ATNC, mais que signifie ATNC ?",
             "bigInput" : [
                 {
-                    "0" : "0"
+                    "input" : ""
                 }
             ] 
         },
@@ -786,15 +786,15 @@
             "choice" : [
                 {
                     "choice" : "Partielle",
-                    "checked" : "false"
+                    "checked" : false
                 },
                 {
                     "choice" : "Importante",
-                    "checked" : "false"
+                    "checked" : false
                 },
                 {
                     "choice" : "Totale",
-                    "checked" : "false"
+                    "checked" : false
                 }
             ] 
         },
@@ -804,7 +804,7 @@
             "QuestionName" : "Selon l'instruction DGS/R13 2011-449, pour lutter contre les ATNC type Prion, l'action de la vapeur d'eau Saturée est une inactivation :",
             "bigInput" : [
                 {
-                    "0" : "0"
+                    "input" : ""
                 }
             ] 
         },
@@ -814,7 +814,7 @@
             "QuestionName" : "Le système d'emballage (au sens de la norme NF EN ISO 11607-1) est-il obligatoire ?",
             "bigInput" : [
                 {
-                    "0" : "0"
+                    "input" : ""
                 }
             ] 
         },
@@ -825,11 +825,11 @@
             "choice" : [
                 {
                     "choice" : "un test Bowie Dick ou test type Hélix ou un système électronique d'embarqué",
-                    "checked" : "false"
+                    "checked" : false
                 },
                 {
                     "choice" : "un cycle de pénétration de vapeur",
-                    "checked" : "false"
+                    "checked" : false
                 }
             ] 
         },
@@ -839,7 +839,7 @@
             "QuestionName" : "Dans les BPPH, on parle de la 'libération de la charge', pouvez vous expliquer ce terme :",
             "bigInput" : [
                 {
-                    "0" : "0"
+                    "input" : ""
                 }
             ] 
         },
@@ -903,7 +903,7 @@
             "titleInput" : "Juste du bon sens...",
             "middleInput" : [
                 {
-                    "0" : "0"
+                    "input" : ""
                 }
             ] 
         },
@@ -914,23 +914,23 @@
             "choice" : [
                 {
                     "choice" : "Caractéristiques de la classe 7 de la norme NF EN ISO 14644-1 au repos",
-                    "checked" : "false"
+                    "checked" : false
                 },
                 {
                     "choice" : "Caractéristiques de la classe 8 de la norme NF EN ISO 14644-1 au repos",
-                    "checked" : "false"
+                    "checked" : false
                 },
                 {
                     "choice" : "Limite recommandée de contamination microbiologique < à 200 UFC/m3",
-                    "checked" : "false"
+                    "checked" : false
                 },
                 {
                     "choice" : "En dépression au moins de 15Pa par rapport aux zones environnantes d’exigences inférieures",
-                    "checked" : "false"
+                    "checked" : false
                 },
                 {
                     "choice" : "En suppression au moins de 15Pa par rapport aux zones environnantes d’exigences inférieures",
-                    "checked" : "false"
+                    "checked" : false
                 }
             ] 
         },
@@ -941,23 +941,23 @@
             "choice" : [
                 {
                     "choice" : "Cycle ATNC",
-                    "checked" : "false"
+                    "checked" : false
                 },
                 {
                     "choice" : "Cycle Conteneur / Instruments Lourds",
-                    "checked" : "false"
+                    "checked" : false
                 },
                 {
                     "choice" : "Cycle Prion",
-                    "checked" : "false"
+                    "checked" : false
                 },
                 {
                     "choice" : "Cycle Caoutchouc",
-                    "checked" : "false"
+                    "checked" : false
                 },
                 {
                     "choice" : "Cycle de vide",
-                    "checked" : "false"
+                    "checked" : false
                 }
             ] 
         },
@@ -968,23 +968,23 @@
             "choice" : [
                 {
                     "choice" : "TH proche de zéro",
-                    "checked" : "false"
+                    "checked" : false
                 },
                 {
                     "choice" : "Eau osmosée",
-                    "checked" : "false"
+                    "checked" : false
                 },
                 {
                     "choice" : "Eau adoucie",
-                    "checked" : "false"
+                    "checked" : false
                 },
                 {
                     "choice" : "Eau déminéralisée",
-                    "checked" : "false"
+                    "checked" : false
                 },
                 {
                     "choice" : "Eau stérile",
-                    "checked" : "false"
+                    "checked" : false
                 }
             ] 
         },
@@ -995,11 +995,11 @@
             "choice" : [
                 {
                     "choice" : "Osmoseur",
-                    "checked" : "false"
+                    "checked" : false
                 },
                 {
                     "choice" : "Adoucisseur",
-                    "checked" : "false"
+                    "checked" : false
                 }
             ] 
         },
@@ -1010,11 +1010,11 @@
             "choice" : [
                 {
                     "choice" : "Tout le personnel doit d’être habilité à la conduite de stérilisateur à la vapeur d’eau",
-                    "checked" : "false"
+                    "checked" : false
                 },
                 {
                     "choice" : "Au moins un agent doit être habilité à la conduite de stérilisateur à la vapeur d’eau",
-                    "checked" : "false"
+                    "checked" : false
                 }
             ] 
         },
@@ -1024,7 +1024,7 @@
             "QuestionName" : "Peut-on stocker les DMR dans le LDI en attendant la recomposition/conditionnement ?",
             "bigInput" : [
                 {
-                    "0" : "0"
+                    "input" : ""
                 }
             ] 
         },
@@ -1035,11 +1035,11 @@
             "choice" : [
                 {
                     "choice" : "Sur l'échelle de pression absolue, la valeur la plus basse qui peut être lue sur un Manomètre est de -1 bar.",
-                    "checked" : "false"
+                    "checked" : false
                 },
                 {
                     "choice" : "Sur l'échelle de pression relative, la valeur la plus basse qui peut être lue sur un Manomètre est de -1 bar.",
-                    "checked" : "false"
+                    "checked" : false
                 }
             ] 
         },
@@ -1050,11 +1050,11 @@
             "choice" : [
                 {
                     "choice" : "Dispositif Autonome pour Travailleur Isolé",
-                    "checked" : "false"
+                    "checked" : false
                 },
                 {
                     "choice" : "Dispositif Alarme pour Travailleur Isolé",
-                    "checked" : "false"
+                    "checked" : false
                 }
             ] 
         },
@@ -1065,11 +1065,11 @@
             "choice" : [
                 {
                     "choice" : "Impossible",
-                    "checked" : "false"
+                    "checked" : false
                 },
                 {
                     "choice" : "Oui",
-                    "checked" : "false"
+                    "checked" : false
                 }
             ] 
         },
@@ -1079,7 +1079,7 @@
             "QuestionName" : "Auriez vous un sujet que vous voulez qu'on aborde en particulier durant cette formation ? (sur votre gestion, sur vos pratiques, sur vos protocoles, sur vos systèmes qualité, sur vos audits internes, sur vos systèmes d'évaluations de vos agents...)",
             "bigInput" : [
                 {
-                    "0" : "0"
+                    "input" : ""
                 }
             ] 
         },

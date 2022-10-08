@@ -1,6 +1,5 @@
-
 const btn = document.querySelector('.input-btn');
-
+const verifySave = window.localStorage.getItem('save')
 btn.addEventListener('click', (e) => {
     e.preventDefault()
     const name = document.getElementById('name');
@@ -19,15 +18,15 @@ btn.addEventListener('click', (e) => {
     if(!regExNameVerify || !regExLastNameVerify || !regExSchoolVerify || !regExMailVerify){
         e.preventDefault();
     }else{
-        window.sessionStorage.setItem("name", name.value);
-        window.sessionStorage.setItem("lastName", lastname.value);
-        window.sessionStorage.setItem("school", school.value)
-        window.sessionStorage.setItem("mail", mail.value)
+        window.localStorage.setItem("name", name.value);
+        window.localStorage.setItem("lastName", lastname.value);
+        window.localStorage.setItem("school", school.value)
+        window.localStorage.setItem("mail", mail.value)
 
-        const getName = window.sessionStorage.getItem("name");
-        const getLastName = window.sessionStorage.getItem("lastName");
-        const getSchool = window.sessionStorage.getItem("school");
-        const getMail = window.sessionStorage.getItem("mail");
+        const getName = window.localStorage.getItem("name");
+        const getLastName = window.localStorage.getItem("lastName");
+        const getSchool = window.localStorage.getItem("school");
+        const getMail = window.localStorage.getItem("mail");
 
         document.querySelector('.container-name').innerHTML = "Nom : " + getName;
         document.querySelector('.container-lastName').innerHTML = "Prénom : " + getLastName;
@@ -47,25 +46,27 @@ btn.addEventListener('click', (e) => {
         file.QCM[60].mail = getMail
     }
 })
-
 let file;
-
-
 fetch("./quiz.json")
 .then((response) => response.json())
 .then((jsondata) => {
-    file = jsondata
-    jsondata.QCM.forEach(element => {
-        createElement(document.querySelector(".qcm"), element)
-    })
+    if(verifySave === null) {
+        file = jsondata
+        jsondata.QCM.forEach(element => {
+            createElement(document.querySelector(".qcm"), element)
+        })
+    }else{
+        const saveParse = JSON.parse(verifySave);
+        file = saveParse;
+        saveParse.QCM.forEach(element => {
+            createElement(document.querySelector(".qcm"), element)
+        })
+    }
 })
 .catch(error => console.log(error));
-
 let number = 100;
 let numberTwo = 1000;
-
 function createElement(container, element) {
-
     const newContainer = document.createElement("div");
     newContainer.setAttribute('class', 'group-question')
     const questionNumber = document.createElement("h3");
@@ -73,11 +74,9 @@ function createElement(container, element) {
     switch(element.role){
         case "input":
             questionNumber.innerHTML = element.QuestionNumber;
-            question.innerHTML = element.QuestionName
-            
+            question.innerHTML = element.QuestionName          
             newContainer.appendChild(questionNumber);
-            newContainer.appendChild(question);
-            
+            newContainer.appendChild(question);           
             if(element.smallInput != undefined){
                 const newDiv = document.createElement("div");
                 newDiv.setAttribute('class', 'small-input_gestion')
@@ -85,9 +84,10 @@ function createElement(container, element) {
                     const input = document.createElement("input");
                     input.setAttribute('type', 'text')
                     input.setAttribute('class', 'small-input')
+                    single.input.length > 3 ? input.value = single.input : input.value = "";
                     input.addEventListener('change', ()=>{
                         for(let i = 0; i<document.querySelectorAll('.small-input').length; i++){                            
-                            file.QCM[0].smallInput[i] = document.querySelectorAll('.small-input')[i].value
+                            file.QCM[0].smallInput[i].input = document.querySelectorAll('.small-input')[i].value
                         }
                     })
                     newDiv.appendChild(input);
@@ -97,9 +97,10 @@ function createElement(container, element) {
             if(element.middleInput != undefined){    
                 const input = document.createElement("textarea");
                 input.setAttribute('class', 'middle-input')
+                element.middleInput[0].input.length > 4 ? input.value = element.middleInput[0].input : input.value = "" ;
                 input.addEventListener('change', ()=>{               
                     const middlein = document.querySelectorAll('.middle-input')
-                    file.QCM[9].middleInput[0] = middlein[1].value 
+                    file.QCM[9].middleInput[0].input = middlein[1].value 
                 })
                 input.addEventListener('keypress', (e) => {
                     if(e.code === "Enter"){
@@ -120,6 +121,7 @@ function createElement(container, element) {
             if(element.bigInput != undefined){    
                 const input = document.createElement("textarea");
                 input.setAttribute('class', 'big-input')
+                element.bigInput[0].input.length > 4 ? input.value = element.bigInput[0].input : input.value = "" ;
                 input.addEventListener('keypress', (e) => {
                     if(e.code === "Enter"){
                         e.preventDefault()
@@ -136,16 +138,16 @@ function createElement(container, element) {
                 })
                 input.addEventListener('change', ()=>{
                     const bigin = document.querySelectorAll('.big-input')
-                    file.QCM[1].bigInput[0] = bigin[0].value
-                    file.QCM[30].bigInput[0] = bigin[1].value
-                    file.QCM[31].bigInput[0] = bigin[2].value
-                    file.QCM[41].bigInput[0] = bigin[3].value
-                    file.QCM[42].bigInput[0] = bigin[4].value
-                    file.QCM[44].bigInput[0] = bigin[5].value
-                    file.QCM[45].bigInput[0] = bigin[6].value
-                    file.QCM[47].bigInput[0] = bigin[7].value
-                    file.QCM[55].bigInput[0] = bigin[8].value
-                    file.QCM[59].bigInput[0] = bigin[9].value
+                    file.QCM[1].bigInput[0].input = bigin[0].value
+                    file.QCM[30].bigInput[0].input = bigin[1].value
+                    file.QCM[31].bigInput[0].input = bigin[2].value
+                    file.QCM[41].bigInput[0].input = bigin[3].value
+                    file.QCM[42].bigInput[0].input = bigin[4].value
+                    file.QCM[44].bigInput[0].input = bigin[5].value
+                    file.QCM[45].bigInput[0].input = bigin[6].value
+                    file.QCM[47].bigInput[0].input = bigin[7].value
+                    file.QCM[55].bigInput[0].input = bigin[8].value
+                    file.QCM[59].bigInput[0].input = bigin[9].value
                 })
                 newContainer.appendChild(input)  
             }
@@ -160,8 +162,6 @@ function createElement(container, element) {
 
             const newDiv = document.createElement("div");
             newDiv.setAttribute('class', 'choice_gestion')
-            
-            
             element.choice.forEach(single => {
                 number = number + 1;
                 const containerChoice = document.createElement("div");
@@ -170,6 +170,11 @@ function createElement(container, element) {
                 containerChoice.setAttribute('class', 'container-choice');
                 input.setAttribute('type', 'checkbox');
                 input.setAttribute('class', 'checkbox');
+                if(single.checked === false){
+                    input.checked = false
+                }if(single.checked === true){
+                    input.checked = true
+                }
                 input.addEventListener("change", checkbox)
                 input.setAttribute('id', `${number}`);
                 string.setAttribute('class', 'string-choice');
@@ -190,14 +195,15 @@ function createElement(container, element) {
             if(element.middleInput != undefined){    
                 const input = document.createElement("textarea");
                 input.setAttribute('class', 'middle-input')
+                element.middleInput[0].input.length > 4 ? input.value = element.middleInput[0].input : input.value = "" ;
                 input.addEventListener('change', ()=>{               
                     const middlein = document.querySelectorAll('.middle-input')
-                    file.QCM[7].middleInput[0] = middlein[0].value 
-                    file.QCM[10].middleInput[0] = middlein[2].value 
-                    file.QCM[14].middleInput[0] = middlein[3].value 
-                    file.QCM[15].middleInput[0] = middlein[4].value 
-                    file.QCM[36].middleInput[0] = middlein[5].value 
-                    file.QCM[37].middleInput[0] = middlein[6].value 
+                    file.QCM[7].middleInput[0].input = middlein[0].value 
+                    file.QCM[10].middleInput[0].input = middlein[2].value 
+                    file.QCM[14].middleInput[0].input = middlein[3].value 
+                    file.QCM[15].middleInput[0].input = middlein[4].value 
+                    file.QCM[36].middleInput[0].input = middlein[5].value 
+                    file.QCM[37].middleInput[0].input = middlein[6].value 
                 })
                 input.addEventListener('keypress', (e) => {
                     if(e.code === "Enter"){
@@ -233,6 +239,11 @@ function createElement(container, element) {
                 input.setAttribute('type', 'checkbox');
                 input.setAttribute('class', 'checkbox');
                 input.setAttribute('id', `${numberTwo}`);
+                if(single.checked === false){
+                    input.checked = false
+                }if(single.checked === true){
+                    input.checked = true
+                }
                 input.addEventListener("change", checkbox)
                 string.setAttribute('class', 'string-choice');
                 string.innerHTML = single.choice;
@@ -250,6 +261,7 @@ function createElement(container, element) {
             if(element.middleInput != undefined){    
                 const input = document.createElement("textarea");
                 input.setAttribute('class', 'middle-input')
+                element.middleInput[0].input.length > 3 ? input.value = element.middleInput[0].input : input.value = "";
                 input.addEventListener('keypress', (e) => {
                     if(e.code === "Enter"){
                         e.preventDefault()
@@ -282,6 +294,7 @@ function createElement(container, element) {
                 containerChoice.setAttribute('class', 'container-choice');
                 input.setAttribute('type', 'number');
                 input.setAttribute('class', 'case-number');
+                input.value = single.value
                 input.addEventListener('change', ()=>{               
                     const orderin = document.querySelectorAll('.case-number')
                     file.QCM[8].choiceOrder[0].value = orderin[0].value
@@ -322,6 +335,7 @@ function createElement(container, element) {
             if(element.middleInput != undefined){    
                 const input = document.createElement("textarea");
                 input.setAttribute('class', 'middle-input')
+                
                 input.addEventListener('change', ()=>{               
                     const middlein = document.querySelectorAll('.middle-input')
                     file.QCM[49].middleInput[0] = middlein[7].value
@@ -332,7 +346,6 @@ function createElement(container, element) {
         break;
     }
 }
-
 function checkbox(e){
     switch(e.target.id){
         case "101":
@@ -1125,15 +1138,55 @@ function checkbox(e){
         break;
     }
 }
-
-
-
 function generer(){
     const urlFile = window.URL.createObjectURL(new Blob([JSON.stringify(file)], {type: "application/json"}))
-    const getName = window.sessionStorage.getItem("name");
-    const getLastName = window.sessionStorage.getItem("lastName")
+    const getName = window.localStorage.getItem("name");
+    const getLastName = window.localStorage.getItem("lastName")
     const a = document.createElement('a')
     a.href= (urlFile)
     a.download = `${getName+'_'+getLastName+'_qcm.json'}`
     a.click()
 }
+function addMenu(){
+    const container = document.body;
+    let menuBool = false
+    const createDivMenu = document.createElement('div')
+    createDivMenu.setAttribute('class', 'menu')
+    const createIco = document.createElement('i')
+    createIco.setAttribute('class', 'fa-solid fa-bars')
+    const createBtnSave = document.createElement('button')
+    createBtnSave.setAttribute('class', 'btn')
+    createBtnSave.innerHTML = 'Sauvegarder la progression'
+    const createBtnDownload = document.createElement('button')
+    createBtnDownload.setAttribute('class', 'btn')
+    createBtnDownload.innerHTML = 'Télécharger le questionnaire'
+    createIco.addEventListener('click', () => {
+        menuBool = !menuBool
+        if (menuBool === false){
+            createIco.className = 'fa-solid fa-bars'
+            createDivMenu.classList.add('menuclose')
+            createDivMenu.classList.remove('menuopen')
+        }else{
+            createIco.className = 'fa-solid fa-xmark'
+            createDivMenu.classList.add('menuopen')
+            createDivMenu.classList.remove('menuclose')
+        }
+    })
+    createBtnSave.addEventListener('click', () => {
+        window.localStorage.setItem("save", JSON.stringify(file));
+        setTimeout(() => {
+            alert("Votre travail à été enregistré..."+"\n"+"Vous pouvez quitter et revenir plus tard !");
+        }, 1000);
+    })
+    createBtnDownload.addEventListener('click', () => {
+        generer()
+        setTimeout(() => {
+            window.localStorage.clear();
+        }, 1500);
+    })
+    createDivMenu.appendChild(createIco)
+    createDivMenu.appendChild(createBtnSave)
+    createDivMenu.appendChild(createBtnDownload)
+    container.appendChild(createDivMenu)
+}
+addMenu();
