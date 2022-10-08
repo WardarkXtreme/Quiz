@@ -6,6 +6,7 @@ body{
     display: flex;
     justify-content:center;
     background-repeat: no-repeat;
+    background: linear-gradient(0deg, rgb(146 176 205) 0%, rgb(255, 255, 255) 100%);
 }
 
 h2{
@@ -34,8 +35,8 @@ textarea{
     align-items: center;
     position: fixed;
     z-index:100;
-    background: linear-gradient(0deg, rgba(34,193,195,100) 0%, rgba(222,253,45,100) 100%);
     overflow: hidden;
+    background: linear-gradient(0deg, rgb(92 137 179) 0%, rgb(255 255 255) 100%);
 }
 .form{
     display: flex;
@@ -76,14 +77,19 @@ textarea{
     background: transparent;
     border-bottom: cornflowerblue solid 2px;
     height: auto;
-    font-size: 1.4rem;
+}
+#name, #lastname, #school, #mail{
+    font-size:1.5rem
+}
+#name:focus, #lastname:focus, #school:focus, #mail:focus{
+    outline:none;
 }
 .input-btn{
     display: flex;
     width: 170px;
     height: 40px;
     border-radius: 2em;
-    background: #9af93e;
+    background: white;
     border: none;
     justify-content: center;
     align-items: center;
@@ -154,6 +160,7 @@ textarea{
     border-radius: 15px;
     height: auto;
     margin:20px 0;
+    background: linear-gradient(0deg, rgb(92 137 179) 0%, rgb(255 255 255) 100%);
 
 }
 
@@ -225,7 +232,7 @@ input::-o-outer-spin-button {
     display: flex;
     padding: 0px 15px;
     border-radius: 15px;
-    background: #bee3ae;
+    background: white;
     width: fit-content;
     margin-bottom: 15px;
     justify-content: space-between;

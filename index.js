@@ -1156,10 +1156,10 @@ function addMenu(){
     createIco.setAttribute('class', 'fa-solid fa-bars')
     const createBtnSave = document.createElement('button')
     createBtnSave.setAttribute('class', 'btn')
-    createBtnSave.innerHTML = 'Sauvegarder la progression'
+    createBtnSave.innerHTML = 'Sauvegarder ma progression'
     const createBtnDownload = document.createElement('button')
     createBtnDownload.setAttribute('class', 'btn')
-    createBtnDownload.innerHTML = 'Télécharger le questionnaire'
+    createBtnDownload.innerHTML = 'Télécharger pour la correction'
     createIco.addEventListener('click', () => {
         menuBool = !menuBool
         if (menuBool === false){
