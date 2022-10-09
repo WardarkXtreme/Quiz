@@ -727,11 +727,11 @@
             "QuestionName" : "Peut-on utiliser le stérilisateur pour :",
             "choice" : [
                 {
-                    "choice" : "Sécher une Unité Stérile non conforme sur la Siccité",
+                    "choice" : "Sécher une Unité Stérile non conforme sur la Siccité ou sécher un instrument qui est encore humide sortant du LDI",
                     "checked" : false
                 },
                 {
-                    "choice" : "Sécher un instrument qui est encore humide sortant du LDI",
+                    "choice" : "Aucune des deux propositions",
                     "checked" : false
                 }
             ] 
