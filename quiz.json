@@ -214,7 +214,7 @@
         {
             "role" : "uniqueChoice",
             "QuestionNumber" : "Question 12/59",
-            "QuestionName" : "Un écouvillonnage se fait par un mouvement de va et vient :",
+            "QuestionName" : "Sur le plan mécanique, avec un écouvillon, quelle action est la plus efficace ?",
             "choice" : [
                 {
                     "choice" : "Tirer",
@@ -317,7 +317,7 @@
         {
             "role" : "uniqueChoice",
             "QuestionNumber" : "Question 17/59",
-            "QuestionName" : "On peut laisser sécher les instruments après la pré-désinfection :",
+            "QuestionName" : "Les instruments non immergeables peuvent être lavés en laveur désinfecteur.",
             "choice" : [
                 {
                     "choice" : "Vrai",
@@ -724,7 +724,7 @@
         {
             "role" : "uniqueChoice",
             "QuestionNumber" : "Question 40/59",
-            "QuestionName" : "En sortie des stérilisateurs, côté déchargement, est-il obligatoire de disposer d'une ZAC en classe ISO 8 ?",
+            "QuestionName" : "Peut-on utiliser le stérilisateur pour :",
             "choice" : [
                 {
                     "choice" : "Sécher une Unité Stérile non conforme sur la Siccité",
@@ -801,7 +801,7 @@
         {
             "role" : "input",
             "QuestionNumber" : "Question 45/59",
-            "QuestionName" : "Selon l'instruction DGS/R13 2011-449, pour lutter contre les ATNC type Prion, l'action de la vapeur d'eau Saturée est une inactivation :",
+            "QuestionName" : "Selon la norme NF EN ISO 11607-1, un système d'emballage est composé de :",
             "bigInput" : [
                 {
                     "input" : ""

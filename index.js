@@ -1,5 +1,88 @@
 const btn = document.querySelector('.input-btn');
 const verifySave = window.localStorage.getItem('save')
+
+document.getElementById('name').addEventListener('input', (e) => {
+    const name = document.getElementById('name');
+    const regExName = /^(([a-zA-Z\s-]{3,25}))$/;
+    const infoName = document.querySelector('.info-form_name')
+    const regExNameVerify = name.value.match(regExName)
+    if(!regExNameVerify){
+        infoName.innerHTML = "Caractères non autorisés"
+        infoName.style.color = 'red'
+    }
+    if(e.target.value.length <=2){
+        infoName.innerHTML = `${e.target.value.length}/3 caractères minimum`
+        infoName.style.color = 'red'
+    }
+    if(e.target.value.length >=25){
+        infoName.innerHTML = `${e.target.value.length}/25 caractères maximum`
+        infoName.style.color = 'red'
+    }
+    if(regExNameVerify){
+        infoName.innerHTML = ""
+    }
+    console.log(e.target.value)
+})
+document.getElementById('lastname').addEventListener('input', (e) => {
+    const lastname = document.getElementById('lastname');
+    const regExLastName = /^(([a-zA-Z\s-]{3,25}))$/;
+    const regExLastNameVerify = lastname.value.match(regExLastName)
+    const infoLastName = document.querySelector('.info-form_lastname')
+    
+    if(!regExLastNameVerify){
+        infoLastName.innerHTML = "Caractères non autorisés"
+        infoLastName.style.color = 'red'
+    }
+    if(e.target.value.length <=2){
+        infoLastName.innerHTML = `${e.target.value.length}/3 caractères minimum`
+        infoLastName.style.color = 'red'
+    }
+    if(e.target.value.length >=25){
+        infoLastName.innerHTML = `${e.target.value.length}/25 caractères maximum`
+        infoLastName.style.color = 'red'
+    }
+    if(regExLastNameVerify){
+        infoLastName.innerHTML = ""
+    }
+    console.log(e.target.value)
+})
+document.getElementById('school').addEventListener('input', (e) => {
+    const school = document.getElementById('school');
+    const regExSchool = /^(([a-zA-Z\s-]{5,25}))$/;
+    const regExSchoolVerify = school.value.match(regExSchool)
+    const infoSchool = document.querySelector('.info-form_school')
+    
+    if(!regExSchoolVerify){
+        infoSchool.innerHTML = "Caractères non autorisés"
+        infoSchool.style.color = 'red'
+    }
+    if(e.target.value.length <=5){
+        infoSchool.innerHTML = `${e.target.value.length}/5 caractères minimum`
+        infoSchool.style.color = 'red'
+    }
+    if(e.target.value.length >=25){
+        infoSchool.innerHTML = `${e.target.value.length}/25 caractères maximum`
+        infoSchool.style.color = 'red'
+    }
+    if(regExSchoolVerify){
+        infoSchool.innerHTML = ""
+    }
+    console.log(e.target.value)
+})
+document.getElementById('mail').addEventListener('input', (e) => {
+    const mail = document.getElementById('mail');
+    const regExMail = /^(([a-zA-Z0-9._-]+@[a-z0-9.]+[.][a-z]{2,6}))$/;
+    const regExMailVerify = mail.value.match(regExMail)
+    const infoMail = document.querySelector('.info-form_mail')
+    if(!regExMailVerify){
+        infoMail.innerHTML = "email non valide, caractéres spéciaux autorisées:{-_@.}"
+        infoMail.style.color = 'red'
+    }
+    if(regExMailVerify){
+        infoMail.innerHTML = ""
+    }
+    console.log(e.target.value)
+})
 btn.addEventListener('click', (e) => {
     e.preventDefault()
     const name = document.getElementById('name');
@@ -294,7 +377,7 @@ function createElement(container, element) {
                 containerChoice.setAttribute('class', 'container-choice');
                 input.setAttribute('type', 'number');
                 input.setAttribute('class', 'case-number');
-                input.value = single.value
+                single.value > 0 ? input.value = single.value : input.placeholder = single.value;
                 input.addEventListener('change', ()=>{               
                     const orderin = document.querySelectorAll('.case-number')
                     file.QCM[8].choiceOrder[0].value = orderin[0].value

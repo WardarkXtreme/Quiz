@@ -8,7 +8,6 @@ body{
     background-repeat: no-repeat;
     background: linear-gradient(0deg, rgb(146 176 205) 0%, rgb(255, 255, 255) 100%);
 }
-
 h2{
     color: cornflowerblue;
 }
@@ -79,7 +78,18 @@ textarea{
     height: auto;
 }
 #name, #lastname, #school, #mail{
-    font-size:1.5rem
+    font-size:1.5rem;
+    margin-bottom:  0px;
+    margin-top: 30px;
+}
+.input-btn{
+    margin-top: 40px;
+}
+.info-form_name, .info-form_lastname, .info-form_school, .info-form_mail{
+    text-align: start;
+    margin: 0 ;
+    width: 80%;
+    max-width: 800px;
 }
 #name:focus, #lastname:focus, #school:focus, #mail:focus{
     outline:none;
@@ -195,9 +205,7 @@ input[type=text] {
 }
 input[type=number] {
     -moz-appearance: textfield;
-
 }
-
 input::-webkit-inner-spin-button,
 input::-webkit-outer-spin-button { 
     -webkit-appearance: none;
